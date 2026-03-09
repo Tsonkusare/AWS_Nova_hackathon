@@ -1,0 +1,39 @@
+{
+  "app": {
+    "title": "Asesor de Cumplimiento IA",
+    "tagline": "Audite contenido generado por IA para riesgos de cumplimiento"
+  },
+  "welcome": {
+    "selectLanguage": "Seleccionar Idioma",
+    "selectAvatar": "Elige Tu Asesor de IA",
+    "startSession": "Iniciar Sesion",
+    "avatarLawyer": "Abogado",
+    "avatarAuditor": "Auditor",
+    "avatarAssistant": "Asistente IA"
+  },
+  "nav": {
+    "newAnalysis": "Nuevo Analisis",
+    "resetSession": "Reiniciar Sesion"
+  },
+  "input": {
+    "placeholder": "Pegue su contenido generado por IA aqui para analisis de cumplimiento...",
+    "uploadFile": "Subir Documento",
+    "uploadHint": "Arrastre y suelte o haga clic para subir (PDF, DOCX, TXT)",
+    "analyze": "Analizar Cumplimiento",
+    "analyzing": "Analizando...",
+    "micHint": "Haga clic para hablar"
+  },
+  "results": {
+    "riskLevel": "Nivel de Riesgo",
+    "low": "Riesgo Bajo",
+    "medium": "Riesgo Medio",
+    "high": "Riesgo Alto",
+    "issues": "Problemas y Violaciones",
+    "recommendations": "Recomendaciones",
+    "noResults": "Envie contenido para ver los resultados del analisis de cumplimiento."
+  },
+  "advisor": {
+    "greeting": "Hola! Soy su asesor de cumplimiento de IA. Pegue algun contenido o suba un documento, y lo analizare para detectar riesgos de cumplimiento.",
+    "thinking": "Analizando su contenido..."
+  }
+}

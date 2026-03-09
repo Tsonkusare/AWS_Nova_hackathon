@@ -1,0 +1,39 @@
+{
+  "app": {
+    "title": "AI Compliance Advisor",
+    "tagline": "Audit AI-generated content for compliance risks"
+  },
+  "welcome": {
+    "selectLanguage": "Select Language",
+    "selectAvatar": "Choose Your AI Advisor",
+    "startSession": "Start Session",
+    "avatarLawyer": "Lawyer",
+    "avatarAuditor": "Auditor",
+    "avatarAssistant": "AI Assistant"
+  },
+  "nav": {
+    "newAnalysis": "New Analysis",
+    "resetSession": "Reset Session"
+  },
+  "input": {
+    "placeholder": "Paste your AI-generated content here for compliance analysis...",
+    "uploadFile": "Upload Document",
+    "uploadHint": "Drag & drop or click to upload (PDF, DOCX, TXT)",
+    "analyze": "Analyze Compliance",
+    "analyzing": "Analyzing...",
+    "micHint": "Click to speak"
+  },
+  "results": {
+    "riskLevel": "Risk Level",
+    "low": "Low Risk",
+    "medium": "Medium Risk",
+    "high": "High Risk",
+    "issues": "Issues & Violations",
+    "recommendations": "Recommendations",
+    "noResults": "Submit content to see compliance analysis results."
+  },
+  "advisor": {
+    "greeting": "Hello! I'm your AI compliance advisor. Paste some content or upload a document, and I'll analyze it for compliance risks.",
+    "thinking": "Analyzing your content..."
+  }
+}

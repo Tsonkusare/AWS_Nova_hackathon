@@ -82,3 +82,19 @@ CREATE TABLE section_embeddings (
     section_id INT PRIMARY KEY REFERENCES sections(section_id) ON DELETE CASCADE,
     embedding VECTOR(1536) -- if using pgvector
 );
+
+
+/***
+SELECT 
+    r.title AS regulation,
+    s.section_number,
+    s.section_title,
+    st.text
+FROM section_embeddings e
+JOIN sections s ON e.section_id = s.section_id
+JOIN regulations r ON r.reg_id = s.reg_id
+JOIN section_text st ON st.section_id = s.section_id
+ORDER BY e.embedding <-> '[question_embedding]'
+LIMIT 3;
+
+***/

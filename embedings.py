@@ -58,7 +58,7 @@ def get_sentence_embedding(path):
     sentence_embeddings = np.vstack(sentence_embeddings)
 
     # Return a tuple: (sentence embeddings array, original cleaned sentences, trained model)
-    return sentence_embeddings, cleaned_sentences, model
+    return sentence_embeddings, cleaned_sentences, model   #
 
 
 

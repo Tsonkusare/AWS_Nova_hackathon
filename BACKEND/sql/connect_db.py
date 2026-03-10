@@ -2,7 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 from BACKEND.embeddings import get_sentence_embedding
 import json
-# run it like python -m BACKEND.sql.connect_db
+# run it like python -m BACKEND.sql.connect_dbgit 
 
 def connect():
     try:

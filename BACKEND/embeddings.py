@@ -7,11 +7,11 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-def get_sentence_embedding(path):
+def get_sentence_embedding(content:str):
     # ---------- 1. Load and lowercase ----------
-    filename = Path(path)
-    with open(filename, 'r', encoding='utf-8') as file:
-        content = file.read()
+  #  filename = Path(path)
+    #with open(filename, 'r', encoding='utf-8') as file:
+       # content = file.read()
 
     content = content.lower()
 

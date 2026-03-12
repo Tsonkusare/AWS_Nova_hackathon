@@ -17,8 +17,8 @@ import os
 import re
 import pdfplumber
 
-BILLS_FOLDER = "BACKEND/data/bills"  # folder containing all your PDFs
-OUTPUT_FILE  = "section_text_all.sql"
+BILLS_FOLDER = "bills_US_2"  # folder containing all your PDFs
+OUTPUT_FILE  = "section_text_alltwo.sql"
 
 def escape_sql(text: str) -> str:
     return text.replace("'", "''")

@@ -17,7 +17,7 @@ import os
 import re
 import pdfplumber
 
-BILLS_FOLDER = "bills_US_2"  # folder containing all your PDFs
+BILLS_FOLDER = "BACKEND\data\bills\bills_eu\OJ_L_202401689_EN_TXT.pdf"  # folder containing all your PDFs
 OUTPUT_FILE  = "section_text_alltwo.sql"
 
 def escape_sql(text: str) -> str:

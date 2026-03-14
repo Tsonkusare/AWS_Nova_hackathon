@@ -39,7 +39,7 @@ def get_sentence_embedding(content:str):
     # ---------- 3. Train Word2Vec ----------
     model = Word2Vec(
         stem_sent_tokens,
-        vector_size=100,
+        vector_size=200,
         window=5,
         min_count=1,
         workers=2,

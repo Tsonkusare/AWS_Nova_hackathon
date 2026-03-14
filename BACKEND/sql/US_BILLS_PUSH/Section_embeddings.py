@@ -12,6 +12,8 @@ from BACKEND.sql.SQL_INTERFACE.embeddings import get_sentence_embedding
 # python -m BACKEND.sql.US_BILLS_PUSH.Section_embeddings
 
 
+
+
 # connect to server and compacts all the sentences into one string for Word2Vec training
 def all_sen() -> str:
     con = connect()
@@ -68,4 +70,4 @@ def push_embeddings():
 
 
 if __name__ == "__main__":
-    push_embeddings()  
+    push_embeddings()

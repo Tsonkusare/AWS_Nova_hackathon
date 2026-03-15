@@ -3,7 +3,7 @@ from transformers import MarianMTModel, MarianTokenizer
 
 # ─────────────────────────────────────────────
 # Supported languages
-# ─────────────────────────────────────────────
+
 SUPPORTED_LANGUAGES = {
     "es": "Spanish",
     "fr": "French",
@@ -14,7 +14,7 @@ SUPPORTED_LANGUAGES = {
 
 # ─────────────────────────────────────────────
 # Translator — cached, reusable
-# ─────────────────────────────────────────────
+
 class Translator:
     _cache: dict = {}
 

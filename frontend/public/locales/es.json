@@ -13,7 +13,8 @@
   },
   "nav": {
     "newAnalysis": "Nuevo Analisis",
-    "resetSession": "Reiniciar Sesion"
+    "resetSession": "Reiniciar Sesion",
+    "backToHome": "Volver al Inicio"
   },
   "input": {
     "placeholder": "Pegue su contenido generado por IA aqui para analisis de cumplimiento...",

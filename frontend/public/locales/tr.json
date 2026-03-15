@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "AI Uyumluluk Danışmanı",
+    "tagline": "AI tarafından oluşturulan içerikleri uyumluluk riskleri açısından denetleyin"
+  },
+  "welcome": {
+    "selectLanguage": "Dil Seçin",
+    "selectAvatar": "AI Danışmanınızı Seçin",
+    "startSession": "Oturumu Başlat",
+    "avatarLawyer": "Avukat",
+    "avatarAuditor": "Denetçi",
+    "avatarAssistant": "AI Asistan"
+  },
+  "nav": {
+    "newAnalysis": "Yeni Analiz",
+    "resetSession": "Oturumu Sıfırla",
+    "backToHome": "Ana Sayfaya Dön"
+  },
+  "input": {
+    "placeholder": "Uyumluluk analizi için AI tarafından oluşturulan içeriğinizi buraya yapıştırın...",
+    "uploadFile": "Belge Yükle",
+    "uploadHint": "Sürükleyip bırakın veya yüklemek için tıklayın (PDF, DOCX, TXT)",
+    "analyze": "Uyumluluk Analizi",
+    "analyzing": "Analiz ediliyor...",
+    "micHint": "Konuşmak için tıklayın"
+  },
+  "results": {
+    "riskLevel": "Risk Seviyesi",
+    "low": "Düşük Risk",
+    "medium": "Orta Risk",
+    "high": "Yüksek Risk",
+    "issues": "Sorunlar ve İhlaller",
+    "recommendations": "Öneriler",
+    "noResults": "Uyumluluk analizi sonuçlarını görmek için içerik gönderin."
+  },
+  "advisor": {
+    "greeting": "Merhaba! Ben AI uyumluluk danışmanınızım. İçerik yapıştırın veya belge yükleyin, uyumluluk risklerini analiz edeyim.",
+    "thinking": "İçeriğiniz analiz ediliyor..."
+  }
+}

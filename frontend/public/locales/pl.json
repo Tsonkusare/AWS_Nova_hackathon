@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "Doradca Zgodności AI",
+    "tagline": "Audytuj treści generowane przez AI pod kątem ryzyk zgodności"
+  },
+  "welcome": {
+    "selectLanguage": "Wybierz Język",
+    "selectAvatar": "Wybierz Doradcę AI",
+    "startSession": "Rozpocznij Sesję",
+    "avatarLawyer": "Prawnik",
+    "avatarAuditor": "Audytor",
+    "avatarAssistant": "Asystent AI"
+  },
+  "nav": {
+    "newAnalysis": "Nowa Analiza",
+    "resetSession": "Resetuj Sesję",
+    "backToHome": "Powrót do Strony Głównej"
+  },
+  "input": {
+    "placeholder": "Wklej tutaj treść wygenerowaną przez AI do analizy zgodności...",
+    "uploadFile": "Prześlij Dokument",
+    "uploadHint": "Przeciągnij i upuść lub kliknij, aby przesłać (PDF, DOCX, TXT)",
+    "analyze": "Analizuj Zgodność",
+    "analyzing": "Analizowanie...",
+    "micHint": "Kliknij, aby mówić"
+  },
+  "results": {
+    "riskLevel": "Poziom Ryzyka",
+    "low": "Niskie Ryzyko",
+    "medium": "Średnie Ryzyko",
+    "high": "Wysokie Ryzyko",
+    "issues": "Problemy i Naruszenia",
+    "recommendations": "Zalecenia",
+    "noResults": "Prześlij treść, aby zobaczyć wyniki analizy zgodności."
+  },
+  "advisor": {
+    "greeting": "Cześć! Jestem twoim doradcą zgodności AI. Wklej treść lub prześlij dokument, a przeanalizuję go pod kątem ryzyk zgodności.",
+    "thinking": "Analizuję twoją treść..."
+  }
+}

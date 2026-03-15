@@ -1,7 +1,27 @@
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../../context/LanguageContext';
 import { useSession } from '../../../context/SessionContext';
-import type { Language } from '../../../types';
+
+const LANGUAGES = [
+  { code: 'en', label: 'English' },
+  { code: 'es', label: 'Español' },
+  { code: 'fr', label: 'Français' },
+  { code: 'de', label: 'Deutsch' },
+  { code: 'pt', label: 'Português' },
+  { code: 'zh', label: '中文' },
+  { code: 'ja', label: '日本語' },
+  { code: 'ko', label: '한국어' },
+  { code: 'hi', label: 'हिन्दी' },
+  { code: 'ar', label: 'العربية' },
+  { code: 'ru', label: 'Русский' },
+  { code: 'it', label: 'Italiano' },
+  { code: 'nl', label: 'Nederlands' },
+  { code: 'tr', label: 'Türkçe' },
+  { code: 'pl', label: 'Polski' },
+  { code: 'sv', label: 'Svenska' },
+  { code: 'th', label: 'ไทย' },
+  { code: 'vi', label: 'Tiếng Việt' },
+];
 
 export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
@@ -28,16 +48,19 @@ export default function Navbar() {
           onClick={handleHome}
           className="text-sm bg-white/10 hover:bg-white/20 text-slate-300 px-4 py-1.5 rounded-lg transition-colors border border-white/10"
         >
-          Back to Home
+          {t('nav.backToHome')}
         </button>
 
         <select
           value={language}
-          onChange={(e) => setLanguage(e.target.value as Language)}
+          onChange={(e) => setLanguage(e.target.value)}
           className="bg-white/10 border border-white/20 text-white text-sm rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          <option value="en" className="bg-slate-800">English</option>
-          <option value="es" className="bg-slate-800">Spanish</option>
+          {LANGUAGES.map((lang) => (
+            <option key={lang.code} value={lang.code} className="bg-slate-800">
+              {lang.label}
+            </option>
+          ))}
         </select>
 
         <button

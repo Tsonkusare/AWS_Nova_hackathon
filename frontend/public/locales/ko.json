@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "AI 준수 자문",
+    "tagline": "AI 생성 콘텐츠의 준수 위험 감사"
+  },
+  "welcome": {
+    "selectLanguage": "언어 선택",
+    "selectAvatar": "AI 자문 선택",
+    "startSession": "세션 시작",
+    "avatarLawyer": "변호사",
+    "avatarAuditor": "감사관",
+    "avatarAssistant": "AI 어시스턴트"
+  },
+  "nav": {
+    "newAnalysis": "새 분석",
+    "resetSession": "세션 초기화",
+    "backToHome": "홈으로 돌아가기"
+  },
+  "input": {
+    "placeholder": "AI 생성 콘텐츠를 여기에 붙여넣어 준수 분석을 수행하세요...",
+    "uploadFile": "문서 업로드",
+    "uploadHint": "드래그 앤 드롭하거나 클릭하여 업로드 (PDF, DOCX, TXT)",
+    "analyze": "준수 분석",
+    "analyzing": "분석 중...",
+    "micHint": "클릭하여 말하기"
+  },
+  "results": {
+    "riskLevel": "위험 수준",
+    "low": "낮은 위험",
+    "medium": "중간 위험",
+    "high": "높은 위험",
+    "issues": "문제 및 위반",
+    "recommendations": "권장 사항",
+    "noResults": "준수 분석 결과를 보려면 콘텐츠를 제출하세요."
+  },
+  "advisor": {
+    "greeting": "안녕하세요! AI 준수 자문입니다. 콘텐츠를 붙여넣거나 문서를 업로드하시면 준수 위험을 분석하겠습니다.",
+    "thinking": "콘텐츠 분석 중..."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "Conseiller de Conformité IA",
+    "tagline": "Auditez le contenu généré par l'IA pour les risques de conformité"
+  },
+  "welcome": {
+    "selectLanguage": "Sélectionner la Langue",
+    "selectAvatar": "Choisissez Votre Conseiller IA",
+    "startSession": "Démarrer la Session",
+    "avatarLawyer": "Avocat",
+    "avatarAuditor": "Auditeur",
+    "avatarAssistant": "Assistant IA"
+  },
+  "nav": {
+    "newAnalysis": "Nouvelle Analyse",
+    "resetSession": "Réinitialiser la Session",
+    "backToHome": "Retour à l'Accueil"
+  },
+  "input": {
+    "placeholder": "Collez votre contenu généré par l'IA ici pour l'analyse de conformité...",
+    "uploadFile": "Télécharger un Document",
+    "uploadHint": "Glissez-déposez ou cliquez pour télécharger (PDF, DOCX, TXT)",
+    "analyze": "Analyser la Conformité",
+    "analyzing": "Analyse en cours...",
+    "micHint": "Cliquez pour parler"
+  },
+  "results": {
+    "riskLevel": "Niveau de Risque",
+    "low": "Risque Faible",
+    "medium": "Risque Moyen",
+    "high": "Risque Élevé",
+    "issues": "Problèmes et Violations",
+    "recommendations": "Recommandations",
+    "noResults": "Soumettez du contenu pour voir les résultats de l'analyse de conformité."
+  },
+  "advisor": {
+    "greeting": "Bonjour! Je suis votre conseiller de conformité IA. Collez du contenu ou téléchargez un document, et je l'analyserai pour détecter les risques de conformité.",
+    "thinking": "Analyse de votre contenu..."
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "Consultor de Conformidade IA",
+    "tagline": "Audite conteúdo gerado por IA para riscos de conformidade"
+  },
+  "welcome": {
+    "selectLanguage": "Selecionar Idioma",
+    "selectAvatar": "Escolha Seu Consultor de IA",
+    "startSession": "Iniciar Sessão",
+    "avatarLawyer": "Advogado",
+    "avatarAuditor": "Auditor",
+    "avatarAssistant": "Assistente IA"
+  },
+  "nav": {
+    "newAnalysis": "Nova Análise",
+    "resetSession": "Reiniciar Sessão",
+    "backToHome": "Voltar ao Início"
+  },
+  "input": {
+    "placeholder": "Cole seu conteúdo gerado por IA aqui para análise de conformidade...",
+    "uploadFile": "Enviar Documento",
+    "uploadHint": "Arraste e solte ou clique para enviar (PDF, DOCX, TXT)",
+    "analyze": "Analisar Conformidade",
+    "analyzing": "Analisando...",
+    "micHint": "Clique para falar"
+  },
+  "results": {
+    "riskLevel": "Nível de Risco",
+    "low": "Risco Baixo",
+    "medium": "Risco Médio",
+    "high": "Risco Alto",
+    "issues": "Problemas e Violações",
+    "recommendations": "Recomendações",
+    "noResults": "Envie conteúdo para ver os resultados da análise de conformidade."
+  },
+  "advisor": {
+    "greeting": "Olá! Sou seu consultor de conformidade de IA. Cole algum conteúdo ou envie um documento, e eu o analisarei para detectar riscos de conformidade.",
+    "thinking": "Analisando seu conteúdo..."
+  }
+}

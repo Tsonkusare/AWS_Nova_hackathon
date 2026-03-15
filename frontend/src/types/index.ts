@@ -1,4 +1,4 @@
-export type Language = 'en' | 'es';
+export type Language = string;
 
 export type AvatarType = 'lawyer' | 'auditor' | 'assistant';
 

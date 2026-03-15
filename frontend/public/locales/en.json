@@ -13,7 +13,8 @@
   },
   "nav": {
     "newAnalysis": "New Analysis",
-    "resetSession": "Reset Session"
+    "resetSession": "Reset Session",
+    "backToHome": "Back to Home"
   },
   "input": {
     "placeholder": "Paste your AI-generated content here for compliance analysis...",

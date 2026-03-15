@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "Cố Vấn Tuân Thủ AI",
+    "tagline": "Kiểm tra nội dung do AI tạo ra về rủi ro tuân thủ"
+  },
+  "welcome": {
+    "selectLanguage": "Chọn Ngôn Ngữ",
+    "selectAvatar": "Chọn Cố Vấn AI",
+    "startSession": "Bắt Đầu Phiên",
+    "avatarLawyer": "Luật Sư",
+    "avatarAuditor": "Kiểm Toán Viên",
+    "avatarAssistant": "Trợ Lý AI"
+  },
+  "nav": {
+    "newAnalysis": "Phân Tích Mới",
+    "resetSession": "Đặt Lại Phiên",
+    "backToHome": "Về Trang Chủ"
+  },
+  "input": {
+    "placeholder": "Dán nội dung do AI tạo ra vào đây để phân tích tuân thủ...",
+    "uploadFile": "Tải Lên Tài Liệu",
+    "uploadHint": "Kéo và thả hoặc nhấp để tải lên (PDF, DOCX, TXT)",
+    "analyze": "Phân Tích Tuân Thủ",
+    "analyzing": "Đang phân tích...",
+    "micHint": "Nhấp để nói"
+  },
+  "results": {
+    "riskLevel": "Mức Độ Rủi Ro",
+    "low": "Rủi Ro Thấp",
+    "medium": "Rủi Ro Trung Bình",
+    "high": "Rủi Ro Cao",
+    "issues": "Vấn Đề và Vi Phạm",
+    "recommendations": "Khuyến Nghị",
+    "noResults": "Gửi nội dung để xem kết quả phân tích tuân thủ."
+  },
+  "advisor": {
+    "greeting": "Xin chào! Tôi là cố vấn tuân thủ AI. Dán nội dung hoặc tải lên tài liệu, tôi sẽ phân tích rủi ro tuân thủ.",
+    "thinking": "Đang phân tích nội dung..."
+  }
+}

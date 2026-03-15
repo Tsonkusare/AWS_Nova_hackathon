@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "KI-Compliance-Berater",
+    "tagline": "KI-generierte Inhalte auf Compliance-Risiken prüfen"
+  },
+  "welcome": {
+    "selectLanguage": "Sprache Auswählen",
+    "selectAvatar": "Wählen Sie Ihren KI-Berater",
+    "startSession": "Sitzung Starten",
+    "avatarLawyer": "Anwalt",
+    "avatarAuditor": "Prüfer",
+    "avatarAssistant": "KI-Assistent"
+  },
+  "nav": {
+    "newAnalysis": "Neue Analyse",
+    "resetSession": "Sitzung Zurücksetzen",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "input": {
+    "placeholder": "Fügen Sie Ihren KI-generierten Inhalt hier ein für die Compliance-Analyse...",
+    "uploadFile": "Dokument Hochladen",
+    "uploadHint": "Ziehen und ablegen oder klicken zum Hochladen (PDF, DOCX, TXT)",
+    "analyze": "Compliance Analysieren",
+    "analyzing": "Analysiert...",
+    "micHint": "Klicken zum Sprechen"
+  },
+  "results": {
+    "riskLevel": "Risikostufe",
+    "low": "Niedriges Risiko",
+    "medium": "Mittleres Risiko",
+    "high": "Hohes Risiko",
+    "issues": "Probleme und Verstöße",
+    "recommendations": "Empfehlungen",
+    "noResults": "Reichen Sie Inhalte ein, um die Ergebnisse der Compliance-Analyse zu sehen."
+  },
+  "advisor": {
+    "greeting": "Hallo! Ich bin Ihr KI-Compliance-Berater. Fügen Sie Inhalte ein oder laden Sie ein Dokument hoch, und ich werde es auf Compliance-Risiken analysieren.",
+    "thinking": "Ihr Inhalt wird analysiert..."
+  }
+}

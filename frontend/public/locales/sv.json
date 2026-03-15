@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "AI Efterlevnadsrådgivare",
+    "tagline": "Granska AI-genererat innehåll för efterlevnadsrisker"
+  },
+  "welcome": {
+    "selectLanguage": "Välj Språk",
+    "selectAvatar": "Välj Din AI-rådgivare",
+    "startSession": "Starta Session",
+    "avatarLawyer": "Advokat",
+    "avatarAuditor": "Revisor",
+    "avatarAssistant": "AI Assistent"
+  },
+  "nav": {
+    "newAnalysis": "Ny Analys",
+    "resetSession": "Återställ Session",
+    "backToHome": "Tillbaka till Start"
+  },
+  "input": {
+    "placeholder": "Klistra in ditt AI-genererade innehåll här för efterlevnadsanalys...",
+    "uploadFile": "Ladda Upp Dokument",
+    "uploadHint": "Dra och släpp eller klicka för att ladda upp (PDF, DOCX, TXT)",
+    "analyze": "Analysera Efterlevnad",
+    "analyzing": "Analyserar...",
+    "micHint": "Klicka för att tala"
+  },
+  "results": {
+    "riskLevel": "Risknivå",
+    "low": "Låg Risk",
+    "medium": "Medelhög Risk",
+    "high": "Hög Risk",
+    "issues": "Problem och Överträdelser",
+    "recommendations": "Rekommendationer",
+    "noResults": "Skicka in innehåll för att se resultaten av efterlevnadsanalysen."
+  },
+  "advisor": {
+    "greeting": "Hej! Jag är din AI-efterlevnadsrådgivare. Klistra in innehåll eller ladda upp ett dokument så analyserar jag det för efterlevnadsrisker.",
+    "thinking": "Analyserar ditt innehåll..."
+  }
+}

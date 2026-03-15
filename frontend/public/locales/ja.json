@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "AIコンプライアンスアドバイザー",
+    "tagline": "AI生成コンテンツのコンプライアンスリスクを監査"
+  },
+  "welcome": {
+    "selectLanguage": "言語を選択",
+    "selectAvatar": "AIアドバイザーを選択",
+    "startSession": "セッション開始",
+    "avatarLawyer": "弁護士",
+    "avatarAuditor": "監査人",
+    "avatarAssistant": "AIアシスタント"
+  },
+  "nav": {
+    "newAnalysis": "新しい分析",
+    "resetSession": "セッションリセット",
+    "backToHome": "ホームに戻る"
+  },
+  "input": {
+    "placeholder": "AI生成コンテンツをここに貼り付けてコンプライアンス分析...",
+    "uploadFile": "ドキュメントをアップロード",
+    "uploadHint": "ドラッグ＆ドロップまたはクリックしてアップロード（PDF、DOCX、TXT）",
+    "analyze": "コンプライアンス分析",
+    "analyzing": "分析中...",
+    "micHint": "クリックして話す"
+  },
+  "results": {
+    "riskLevel": "リスクレベル",
+    "low": "低リスク",
+    "medium": "中リスク",
+    "high": "高リスク",
+    "issues": "問題と違反",
+    "recommendations": "推奨事項",
+    "noResults": "コンプライアンス分析結果を表示するにはコンテンツを送信してください。"
+  },
+  "advisor": {
+    "greeting": "こんにちは！AIコンプライアンスアドバイザーです。コンテンツを貼り付けるかドキュメントをアップロードしてください。コンプライアンスリスクを分析します。",
+    "thinking": "コンテンツを分析中..."
+  }
+}

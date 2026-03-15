@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "AI合规顾问",
+    "tagline": "审核AI生成内容的合规风险"
+  },
+  "welcome": {
+    "selectLanguage": "选择语言",
+    "selectAvatar": "选择您的AI顾问",
+    "startSession": "开始会话",
+    "avatarLawyer": "律师",
+    "avatarAuditor": "审计师",
+    "avatarAssistant": "AI助手"
+  },
+  "nav": {
+    "newAnalysis": "新分析",
+    "resetSession": "重置会话",
+    "backToHome": "返回首页"
+  },
+  "input": {
+    "placeholder": "在此粘贴您的AI生成内容以进行合规分析...",
+    "uploadFile": "上传文档",
+    "uploadHint": "拖放或点击上传（PDF、DOCX、TXT）",
+    "analyze": "分析合规性",
+    "analyzing": "分析中...",
+    "micHint": "点击说话"
+  },
+  "results": {
+    "riskLevel": "风险等级",
+    "low": "低风险",
+    "medium": "中等风险",
+    "high": "高风险",
+    "issues": "问题与违规",
+    "recommendations": "建议",
+    "noResults": "提交内容以查看合规分析结果。"
+  },
+  "advisor": {
+    "greeting": "您好！我是您的AI合规顾问。粘贴一些内容或上传文档，我将分析其合规风险。",
+    "thinking": "正在分析您的内容..."
+  }
+}

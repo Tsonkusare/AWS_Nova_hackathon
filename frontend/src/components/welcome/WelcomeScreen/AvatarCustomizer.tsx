@@ -1,4 +1,4 @@
-import type { AvatarConfig, HairStyle, Gender } from '../../../types';
+import type { AvatarConfig, Gender } from '../../../types';
 
 interface AvatarCustomizerProps {
   config: AvatarConfig;
@@ -23,14 +23,6 @@ const shirtColors = [
 const pantsColors = [
   '#1a1a2e', '#2d3a4a', '#3b2414', '#1e3a5f',
   '#2d4a2e', '#4a3520', '#222222', '#4a4a4a',
-];
-
-const hairStyles: { value: HairStyle; label: string }[] = [
-  { value: 'short', label: 'Short' },
-  { value: 'long', label: 'Long' },
-  { value: 'bun', label: 'Bun' },
-  { value: 'mohawk', label: 'Mohawk' },
-  { value: 'buzz', label: 'Buzz' },
 ];
 
 const genders: { value: Gender; label: string }[] = [
@@ -90,11 +82,6 @@ export default function AvatarCustomizer({ config, onChange }: AvatarCustomizerP
       <div className="space-y-2">
         <label className="text-xs text-slate-400 block">Skin Tone</label>
         <ColorPicker colors={skinTones} selected={config.skinColor} onSelect={(c) => update({ skinColor: c })} />
-      </div>
-
-      <div className="space-y-2">
-        <label className="text-xs text-slate-400 block">Hair Style</label>
-        <ButtonGroup options={hairStyles} selected={config.hairStyle} onSelect={(v) => update({ hairStyle: v })} />
       </div>
 
       <div className="space-y-2">

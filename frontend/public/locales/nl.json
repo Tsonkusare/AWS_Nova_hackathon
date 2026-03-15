@@ -1,0 +1,40 @@
+{
+  "app": {
+    "title": "AI Compliance Adviseur",
+    "tagline": "Audit AI-gegenereerde inhoud op nalevingsrisico's"
+  },
+  "welcome": {
+    "selectLanguage": "Selecteer Taal",
+    "selectAvatar": "Kies Uw AI Adviseur",
+    "startSession": "Start Sessie",
+    "avatarLawyer": "Advocaat",
+    "avatarAuditor": "Auditor",
+    "avatarAssistant": "AI Assistent"
+  },
+  "nav": {
+    "newAnalysis": "Nieuwe Analyse",
+    "resetSession": "Sessie Resetten",
+    "backToHome": "Terug naar Home"
+  },
+  "input": {
+    "placeholder": "Plak uw AI-gegenereerde inhoud hier voor nalevingsanalyse...",
+    "uploadFile": "Document Uploaden",
+    "uploadHint": "Sleep en laat vallen of klik om te uploaden (PDF, DOCX, TXT)",
+    "analyze": "Naleving Analyseren",
+    "analyzing": "Analyseren...",
+    "micHint": "Klik om te spreken"
+  },
+  "results": {
+    "riskLevel": "Risiconiveau",
+    "low": "Laag Risico",
+    "medium": "Gemiddeld Risico",
+    "high": "Hoog Risico",
+    "issues": "Problemen en Overtredingen",
+    "recommendations": "Aanbevelingen",
+    "noResults": "Dien inhoud in om nalevingsanalyseresultaten te zien."
+  },
+  "advisor": {
+    "greeting": "Hallo! Ik ben uw AI compliance adviseur. Plak inhoud of upload een document en ik analyseer het op nalevingsrisico's.",
+    "thinking": "Uw inhoud wordt geanalyseerd..."
+  }
+}

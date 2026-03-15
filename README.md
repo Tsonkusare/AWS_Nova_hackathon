@@ -27,6 +27,27 @@ npm run dev
 ### Backend
 TBD
 
+## Uncommitted Changes — Backend
+
+### Modified Files
+
+- **`BACKEND/app.py`** — Added routers for analyze, generate, regulation, and bill routes; startup DB init and bill cache loading
+- **`BACKEND/config.py`** — Updated configuration settings
+- **`BACKEND/db/connection.py`** — Updated database connection setup
+- **`BACKEND/db/init_db.py`** — Expanded DB initialization with table creation and regulation seeding
+- **`BACKEND/models/analysis.py`** — Updated analysis model fields
+- **`BACKEND/routes/regulation_routes.py`** — Updated regulation endpoints
+- **`BACKEND/.env`** — Updated environment variables
+
+### New Files
+
+- **`BACKEND/routes/analyze_routes.py`** — Text and file analysis endpoints
+- **`BACKEND/routes/bill_routes.py`** — Bill listing and search endpoints
+- **`BACKEND/routes/generate_routes.py`** — Text generation endpoint
+- **`BACKEND/services/bill_loader.py`** — Bill data loader service
+- **`BACKEND/data/bills_cache.json`** — Cached bill data (136 bills)
+- **`BACKEND/data/copilot.db`** — SQLite database
+
 ## Team Work Log
 
 See individual logs:

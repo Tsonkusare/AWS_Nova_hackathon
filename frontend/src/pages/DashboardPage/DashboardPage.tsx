@@ -7,6 +7,7 @@ import AnalyzeButton from '../../components/analysis/AnalyzeButton/AnalyzeButton
 import RiskLevel from '../../components/results/RiskLevel/RiskLevel';
 import IssuesList from '../../components/results/IssuesList/IssuesList';
 import Recommendations from '../../components/results/Recommendations/Recommendations';
+import RelevantBills from '../../components/results/RelevantBills/RelevantBills';
 import { useSession } from '../../context/SessionContext';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -44,6 +45,7 @@ export default function DashboardPage() {
               <RiskLevel />
               <IssuesList />
               <Recommendations />
+              <RelevantBills />
             </div>
           ) : (
             <p className="text-sm text-slate-500 text-center py-8">{t('results.noResults')}</p>

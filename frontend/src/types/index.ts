@@ -41,9 +41,17 @@ export interface Recommendation {
   description: string;
 }
 
+export interface RelevantBill {
+  jurisdiction: string;
+  bill_number: string;
+  year: number | null;
+  snippet: string;
+}
+
 export interface AnalysisResult {
   riskLevel: RiskLevel;
   issues: Issue[];
   recommendations: Recommendation[];
   explanation: string;
+  relevantBills?: RelevantBill[];
 }

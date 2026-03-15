@@ -1,3 +1,5 @@
+from typing import Optional
+
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy import text
 from sqlalchemy.orm import Session
@@ -9,8 +11,8 @@ router = APIRouter(prefix="/regulations", tags=["Regulations"])
 
 @router.get("/")
 def list_regulations(
-    jurisdiction: str | None = Query(default=None),
-    status: str | None = Query(default=None),
+    jurisdiction: Optional[str] = Query(default=None),
+    status: Optional[str] = Query(default=None),
     limit: int = Query(default=20, le=100),
     db: Session = Depends(get_db),
 ):
@@ -32,14 +34,14 @@ def list_regulations(
     params = {}
 
     if jurisdiction:
-        query += " AND c.name ILIKE :jurisdiction"
+        query += " AND LOWER(c.name) LIKE LOWER(:jurisdiction)"
         params["jurisdiction"] = f"%{jurisdiction}%"
 
     if status:
-        query += " AND r.status ILIKE :status"
+        query += " AND LOWER(r.status) LIKE LOWER(:status)"
         params["status"] = status
 
-    query += " ORDER BY r.year DESC NULLS LAST, r.reg_id DESC LIMIT :limit"
+    query += " ORDER BY r.year DESC, r.reg_id DESC LIMIT :limit"
     params["limit"] = limit
 
     result = db.execute(text(query), params).fetchall()

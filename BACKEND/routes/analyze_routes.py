@@ -258,8 +258,7 @@ def _do_analysis(text: str, language: str) -> dict:
         result = _keyword_analysis(english_text)
 
     if language != "en":
-        # Batch all texts into one translation call for speed
-        SEPARATOR = " ||| "
+        # Collect all texts, translate in one batch call
         all_texts = [result["explanation"]]
         for issue in result.get("issues", []):
             all_texts.extend([issue["title"], issue["description"]])
@@ -268,33 +267,23 @@ def _do_analysis(text: str, language: str) -> dict:
         for bill in relevant_bills:
             all_texts.append(bill["snippet"])
 
-        joined = SEPARATOR.join(all_texts)
         try:
             from deep_translator import GoogleTranslator
-            translated_joined = GoogleTranslator(source='en', target=language).translate(joined)
-            translated_parts = translated_joined.split("|||")
-            # Strip whitespace from each part
-            translated_parts = [p.strip() for p in translated_parts]
+            translated = GoogleTranslator(source='en', target=language).translate_batch(all_texts)
         except Exception:
-            translated_parts = all_texts
+            translated = all_texts
 
         # Unpack back
         idx = 0
-        if idx < len(translated_parts):
-            result["explanation"] = translated_parts[idx]; idx += 1
+        result["explanation"] = translated[idx]; idx += 1
         for issue in result.get("issues", []):
-            if idx < len(translated_parts):
-                issue["title"] = translated_parts[idx]; idx += 1
-            if idx < len(translated_parts):
-                issue["description"] = translated_parts[idx]; idx += 1
+            issue["title"] = translated[idx]; idx += 1
+            issue["description"] = translated[idx]; idx += 1
         for rec in result.get("recommendations", []):
-            if idx < len(translated_parts):
-                rec["title"] = translated_parts[idx]; idx += 1
-            if idx < len(translated_parts):
-                rec["description"] = translated_parts[idx]; idx += 1
+            rec["title"] = translated[idx]; idx += 1
+            rec["description"] = translated[idx]; idx += 1
         for bill in relevant_bills:
-            if idx < len(translated_parts):
-                bill["snippet"] = translated_parts[idx]; idx += 1
+            bill["snippet"] = translated[idx]; idx += 1
 
     result["relevant_bills"] = relevant_bills
     return result
@@ -357,19 +346,13 @@ def _translate_single(text: str, from_lang: str, to_lang: str) -> str:
 
 @router.post("/translate/batch")
 async def batch_translate(request: BatchTranslateRequest):
-    """Translate multiple texts at once using a single API call."""
+    """Translate multiple texts at once."""
     if request.from_lang == request.to_lang:
         return {"texts": request.texts}
-    SEPARATOR = " ||| "
-    joined = SEPARATOR.join(request.texts)
     try:
         from deep_translator import GoogleTranslator
-        translated = GoogleTranslator(source=request.from_lang, target=request.to_lang).translate(joined)
-        parts = [p.strip() for p in translated.split("|||")]
-        # Ensure we have the right number of parts
-        while len(parts) < len(request.texts):
-            parts.append(request.texts[len(parts)])
-        return {"texts": parts[:len(request.texts)]}
+        translated = GoogleTranslator(source=request.from_lang, target=request.to_lang).translate_batch(request.texts)
+        return {"texts": translated}
     except Exception:
         return {"texts": request.texts}
 

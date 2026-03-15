@@ -132,6 +132,19 @@ export async function translateText(text: string, fromLang: string, toLang: stri
   return data.text;
 }
 
+export async function batchTranslate(texts: string[], fromLang: string, toLang: string): Promise<string[]> {
+  if (fromLang === toLang) return texts;
+  const response = await fetch(`${API_BASE}/analyze/translate/batch`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ texts, from_lang: fromLang, to_lang: toLang }),
+  });
+
+  if (!response.ok) return texts;
+  const data = await response.json();
+  return data.texts;
+}
+
 export async function checkBackendHealth(): Promise<boolean> {
   try {
     const response = await fetch(`${API_BASE}/`);

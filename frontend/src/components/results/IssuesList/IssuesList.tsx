@@ -23,7 +23,7 @@ export default function IssuesList() {
             <div className="flex items-center justify-between mb-2">
               <h4 className="text-sm font-medium text-white">{issue.title}</h4>
               <span className={`text-xs px-2 py-0.5 rounded-full ${severityColors[issue.severity]}`}>
-                {issue.severity}
+                {t(`results.${issue.severity}`)}
               </span>
             </div>
             <p className="text-xs text-slate-400">{issue.description}</p>

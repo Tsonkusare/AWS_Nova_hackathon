@@ -258,13 +258,43 @@ def _do_analysis(text: str, language: str) -> dict:
         result = _keyword_analysis(english_text)
 
     if language != "en":
-        result["explanation"] = _translate_from_english(result["explanation"], language)
+        # Batch all texts into one translation call for speed
+        SEPARATOR = " ||| "
+        all_texts = [result["explanation"]]
         for issue in result.get("issues", []):
-            issue["title"] = _translate_from_english(issue["title"], language)
-            issue["description"] = _translate_from_english(issue["description"], language)
+            all_texts.extend([issue["title"], issue["description"]])
         for rec in result.get("recommendations", []):
-            rec["title"] = _translate_from_english(rec["title"], language)
-            rec["description"] = _translate_from_english(rec["description"], language)
+            all_texts.extend([rec["title"], rec["description"]])
+        for bill in relevant_bills:
+            all_texts.append(bill["snippet"])
+
+        joined = SEPARATOR.join(all_texts)
+        try:
+            from deep_translator import GoogleTranslator
+            translated_joined = GoogleTranslator(source='en', target=language).translate(joined)
+            translated_parts = translated_joined.split("|||")
+            # Strip whitespace from each part
+            translated_parts = [p.strip() for p in translated_parts]
+        except Exception:
+            translated_parts = all_texts
+
+        # Unpack back
+        idx = 0
+        if idx < len(translated_parts):
+            result["explanation"] = translated_parts[idx]; idx += 1
+        for issue in result.get("issues", []):
+            if idx < len(translated_parts):
+                issue["title"] = translated_parts[idx]; idx += 1
+            if idx < len(translated_parts):
+                issue["description"] = translated_parts[idx]; idx += 1
+        for rec in result.get("recommendations", []):
+            if idx < len(translated_parts):
+                rec["title"] = translated_parts[idx]; idx += 1
+            if idx < len(translated_parts):
+                rec["description"] = translated_parts[idx]; idx += 1
+        for bill in relevant_bills:
+            if idx < len(translated_parts):
+                bill["snippet"] = translated_parts[idx]; idx += 1
 
     result["relevant_bills"] = relevant_bills
     return result
@@ -300,6 +330,48 @@ def _bedrock_translate(text: str, from_lang: str, to_lang: str) -> Optional[str]
         return "\n".join(b["text"] for b in blocks if "text" in b).strip()
     except Exception:
         return None
+
+
+class BatchTranslateRequest(BaseModel):
+    texts: list[str]
+    from_lang: str = "en"
+    to_lang: str = "en"
+
+
+def _translate_single(text: str, from_lang: str, to_lang: str) -> str:
+    if from_lang == to_lang or not text.strip():
+        return text
+    translated = text
+    if from_lang != "en":
+        translated = _translate_to_english(translated, from_lang)
+    if to_lang != "en":
+        translated = _translate_from_english(translated, to_lang)
+    if translated == text:
+        try:
+            from deep_translator import GoogleTranslator
+            translated = GoogleTranslator(source=from_lang, target=to_lang).translate(text)
+        except Exception:
+            pass
+    return translated
+
+
+@router.post("/translate/batch")
+async def batch_translate(request: BatchTranslateRequest):
+    """Translate multiple texts at once using a single API call."""
+    if request.from_lang == request.to_lang:
+        return {"texts": request.texts}
+    SEPARATOR = " ||| "
+    joined = SEPARATOR.join(request.texts)
+    try:
+        from deep_translator import GoogleTranslator
+        translated = GoogleTranslator(source=request.from_lang, target=request.to_lang).translate(joined)
+        parts = [p.strip() for p in translated.split("|||")]
+        # Ensure we have the right number of parts
+        while len(parts) < len(request.texts):
+            parts.append(request.texts[len(parts)])
+        return {"texts": parts[:len(request.texts)]}
+    except Exception:
+        return {"texts": request.texts}
 
 
 @router.post("/translate")

@@ -1,14 +1,71 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useSession } from '../../../context/SessionContext';
 import { useLanguage } from '../../../context/LanguageContext';
-import { analyzeText, analyzeFile } from '../../../services/api';
+import { analyzeText, analyzeFile, batchTranslate } from '../../../services/api';
+import type { AnalysisResult } from '../../../types';
 
 export default function AnalyzeButton() {
-  const { inputText, uploadedFile, isAnalyzing, setIsAnalyzing, setAnalysisResult } = useSession();
+  const { inputText, uploadedFile, isAnalyzing, setIsAnalyzing, setAnalysisResult, analysisResult } = useSession();
   const { language, t } = useLanguage();
   const [error, setError] = useState<string | null>(null);
+  const prevLangRef = useRef(language);
 
   const hasInput = inputText.trim().length > 0 || uploadedFile !== null;
+
+  // Translate existing results when language changes
+  useEffect(() => {
+    const prevLang = prevLangRef.current;
+    prevLangRef.current = language;
+
+    if (prevLang !== language && analysisResult) {
+      translateResults(analysisResult, prevLang, language);
+    }
+  }, [language]);
+
+  async function translateResults(result: AnalysisResult, fromLang: string, toLang: string) {
+    try {
+      // Collect all texts into one array for a single batch call
+      const allTexts: string[] = [result.explanation];
+      for (const issue of result.issues) {
+        allTexts.push(issue.title, issue.description);
+      }
+      for (const rec of result.recommendations) {
+        allTexts.push(rec.title, rec.description);
+      }
+      for (const bill of result.relevantBills || []) {
+        allTexts.push(bill.snippet);
+      }
+
+      const translated = await batchTranslate(allTexts, fromLang, toLang);
+
+      // Unpack translated texts back into the result structure
+      let idx = 0;
+      const newExplanation = translated[idx++];
+      const newIssues = result.issues.map((issue) => ({
+        title: translated[idx++],
+        description: translated[idx++],
+        severity: issue.severity,
+      }));
+      const newRecs = result.recommendations.map(() => ({
+        title: translated[idx++],
+        description: translated[idx++],
+      }));
+      const newBills = (result.relevantBills || []).map((bill) => ({
+        ...bill,
+        snippet: translated[idx++],
+      }));
+
+      setAnalysisResult({
+        ...result,
+        explanation: newExplanation,
+        issues: newIssues,
+        recommendations: newRecs,
+        relevantBills: newBills,
+      });
+    } catch {
+      // silently fail — keep existing results
+    }
+  }
 
   async function handleAnalyze() {
     setIsAnalyzing(true);

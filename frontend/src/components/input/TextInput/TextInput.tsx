@@ -8,6 +8,7 @@ const CATEGORIES = ['hiring', 'healthcare', 'finance', 'surveillance', 'educatio
 const SUPPORTED_LANGS = ['en', 'es', 'de', 'it', 'fr'];
 
 const LANG_MARKERS: Record<string, string[]> = {
+  en: ['the', 'and', 'is', 'are', 'was', 'were', 'have', 'has', 'been', 'will', 'would', 'could', 'should', 'that', 'this', 'with', 'from', 'they', 'their', 'which', 'about', 'into', 'through', 'during', 'before', 'after', 'above', 'between', 'does', 'did', 'doing', 'each', 'because', 'these', 'those', 'than', 'been', 'its', 'only', 'other'],
   es: ['el', 'la', 'los', 'las', 'del', 'que', 'por', 'para', 'con', 'una', 'como', 'pero', 'más', 'este', 'esta', 'también', 'puede', 'sobre', 'todo', 'tiene', 'ser', 'están', 'después', 'año', 'años', 'muy', 'ya', 'cuando', 'desde', 'entre', 'así', 'nos', 'durante', 'según', 'está', 'había'],
   fr: ['le', 'la', 'les', 'des', 'une', 'dans', 'pour', 'que', 'qui', 'sur', 'est', 'pas', 'avec', 'sont', 'plus', 'mais', 'par', 'ont', 'ses', 'cette', 'comme', 'peut', 'tout', 'fait', 'aussi', 'nous', 'être', 'même', 'autre', 'après', 'très', 'entre', 'donc', 'où', 'leur', 'encore', 'quelque', 'sous', 'alors'],
   de: ['der', 'die', 'das', 'und', 'ist', 'ein', 'eine', 'für', 'mit', 'auf', 'den', 'von', 'sich', 'des', 'dem', 'nicht', 'werden', 'kann', 'sind', 'wird', 'auch', 'als', 'nach', 'wie', 'oder', 'aber', 'über', 'dass', 'noch', 'bei', 'nur', 'aus', 'wenn', 'hat', 'alle', 'diese', 'haben', 'mehr', 'wurde', 'zum'],
@@ -36,7 +37,8 @@ function detectLanguage(text: string): string | null {
   const nonLatin = /[\u0400-\u04FF\u0600-\u06FF\u0900-\u097F\u3000-\u9FFF\uAC00-\uD7AF\u0E00-\u0E7F]/;
   if (nonLatin.test(text)) return 'unsupported';
 
-  return null;
+  // Default to English if no other language detected strongly
+  return 'en';
 }
 
 export default function TextInput() {
@@ -128,7 +130,7 @@ export default function TextInput() {
             disabled={isGenerating}
             className="px-2.5 py-1 text-xs rounded-md bg-white/10 hover:bg-white/20 text-slate-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed capitalize"
           >
-            {cat}
+            {t(`categories.${cat}`)}
           </button>
         ))}
       </div>

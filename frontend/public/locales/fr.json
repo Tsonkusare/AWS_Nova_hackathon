@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Better Call Nova",
+    "title": "Mieux Vaut Appeler Nova",
     "tagline": "Auditez le contenu généré par l'IA pour les risques de conformité"
   },
   "welcome": {
@@ -83,5 +83,12 @@
     "white": "Blanc",
     "gray": "Gris",
     "select": "Choisir"
+  },
+  "categories": {
+    "hiring": "Recrutement",
+    "healthcare": "Santé",
+    "finance": "Finance",
+    "surveillance": "Surveillance",
+    "education": "Éducation"
   }
 }

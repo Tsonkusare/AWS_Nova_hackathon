@@ -83,5 +83,12 @@
     "white": "White",
     "gray": "Gray",
     "select": "Select"
+  },
+  "categories": {
+    "hiring": "Hiring",
+    "healthcare": "Healthcare",
+    "finance": "Finance",
+    "surveillance": "Surveillance",
+    "education": "Education"
   }
 }

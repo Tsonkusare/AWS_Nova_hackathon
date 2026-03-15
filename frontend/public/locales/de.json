@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "Better Call Nova",
+    "title": "Besser Nova Anrufen",
     "tagline": "KI-generierte Inhalte auf Compliance-Risiken prüfen"
   },
   "welcome": {
@@ -83,5 +83,12 @@
     "white": "Weiss",
     "gray": "Grau",
     "select": "Wahlen"
+  },
+  "categories": {
+    "hiring": "Einstellung",
+    "healthcare": "Gesundheit",
+    "finance": "Finanzen",
+    "surveillance": "Überwachung",
+    "education": "Bildung"
   }
 }

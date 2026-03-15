@@ -9,7 +9,10 @@
     "startSession": "Iniciar Sesion",
     "avatarLawyer": "Abogado",
     "avatarAuditor": "Auditor",
-    "avatarAssistant": "Asistente IA"
+    "avatarAssistant": "Asistente IA",
+    "searchLanguages": "Buscar idiomas...",
+    "noLanguages": "No se encontraron idiomas",
+    "selectLanguagePlaceholder": "Seleccionar idioma"
   },
   "nav": {
     "newAnalysis": "Nuevo Analisis",
@@ -22,7 +25,11 @@
     "uploadHint": "Arrastre y suelte o haga clic para subir (PDF, DOCX, TXT)",
     "analyze": "Analizar Cumplimiento",
     "analyzing": "Analizando...",
-    "micHint": "Haga clic para hablar"
+    "micHint": "Haga clic para hablar",
+    "generating": "Generando...",
+    "generateSample": "Generar Ejemplo",
+    "generateError": "No se pudo generar texto. Asegurese de que el backend este funcionando.",
+    "backendError": "No se pudo conectar al backend. Asegurese de que el servidor este funcionando en el puerto 8000."
   },
   "results": {
     "riskLevel": "Nivel de Riesgo",
@@ -31,10 +38,47 @@
     "high": "Riesgo Alto",
     "issues": "Problemas y Violaciones",
     "recommendations": "Recomendaciones",
-    "noResults": "Envie contenido para ver los resultados del analisis de cumplimiento."
+    "noResults": "Envie contenido para ver los resultados del analisis de cumplimiento.",
+    "relevantRegulations": "Regulaciones Relevantes"
   },
   "advisor": {
     "greeting": "Hola! Soy su asesor de cumplimiento de IA. Pegue algun contenido o suba un documento, y lo analizare para detectar riesgos de cumplimiento.",
     "thinking": "Analizando su contenido..."
+  },
+  "customize": {
+    "gender": "Genero",
+    "skinTone": "Tono de Piel",
+    "hairColor": "Color de Cabello",
+    "shirtColor": "Color de Camisa",
+    "pantsColor": "Color de Pantalon",
+    "male": "Masculino",
+    "female": "Femenino"
+  },
+  "colors": {
+    "light": "Claro",
+    "fair": "Palido",
+    "mediumLight": "Medio Claro",
+    "medium": "Medio",
+    "tan": "Bronceado",
+    "mediumDark": "Medio Oscuro",
+    "dark": "Oscuro",
+    "deep": "Profundo",
+    "black": "Negro",
+    "darkBrown": "Marron Oscuro",
+    "brown": "Marron",
+    "lightBrown": "Marron Claro",
+    "blonde": "Rubio",
+    "red": "Rojo",
+    "auburn": "Caoba",
+    "purple": "Morado",
+    "navy": "Azul Marino",
+    "charcoal": "Carbon",
+    "blue": "Azul",
+    "plum": "Ciruela",
+    "forestGreen": "Verde Bosque",
+    "gold": "Dorado",
+    "white": "Blanco",
+    "gray": "Gris",
+    "select": "Seleccionar"
   }
 }

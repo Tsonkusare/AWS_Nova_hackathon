@@ -9,7 +9,10 @@
     "startSession": "Inizia Sessione",
     "avatarLawyer": "Avvocato",
     "avatarAuditor": "Revisore",
-    "avatarAssistant": "Assistente IA"
+    "avatarAssistant": "Assistente IA",
+    "searchLanguages": "Cerca lingue...",
+    "noLanguages": "Nessuna lingua trovata",
+    "selectLanguagePlaceholder": "Seleziona lingua"
   },
   "nav": {
     "newAnalysis": "Nuova Analisi",
@@ -22,7 +25,11 @@
     "uploadHint": "Trascina e rilascia o clicca per caricare (PDF, DOCX, TXT)",
     "analyze": "Analizza Conformità",
     "analyzing": "Analisi in corso...",
-    "micHint": "Clicca per parlare"
+    "micHint": "Clicca per parlare",
+    "generating": "Generazione...",
+    "generateSample": "Genera Esempio",
+    "generateError": "Impossibile generare il testo. Assicurarsi che il backend sia in esecuzione.",
+    "backendError": "Impossibile raggiungere il backend. Assicurarsi che il server sia in esecuzione sulla porta 8000."
   },
   "results": {
     "riskLevel": "Livello di Rischio",
@@ -31,10 +38,47 @@
     "high": "Rischio Alto",
     "issues": "Problemi e Violazioni",
     "recommendations": "Raccomandazioni",
-    "noResults": "Invia contenuti per vedere i risultati dell'analisi di conformità."
+    "noResults": "Invia contenuti per vedere i risultati dell'analisi di conformità.",
+    "relevantRegulations": "Regolamenti Pertinenti"
   },
   "advisor": {
     "greeting": "Ciao! Sono il tuo consulente di conformità IA. Incolla del contenuto o carica un documento e lo analizzerò per rilevare rischi di conformità.",
     "thinking": "Analisi del contenuto..."
+  },
+  "customize": {
+    "gender": "Genere",
+    "skinTone": "Tonalita della Pelle",
+    "hairColor": "Colore dei Capelli",
+    "shirtColor": "Colore della Camicia",
+    "pantsColor": "Colore dei Pantaloni",
+    "male": "Maschio",
+    "female": "Femmina"
+  },
+  "colors": {
+    "light": "Chiaro",
+    "fair": "Pallido",
+    "mediumLight": "Medio Chiaro",
+    "medium": "Medio",
+    "tan": "Abbronzato",
+    "mediumDark": "Medio Scuro",
+    "dark": "Scuro",
+    "deep": "Profondo",
+    "black": "Nero",
+    "darkBrown": "Marrone Scuro",
+    "brown": "Marrone",
+    "lightBrown": "Marrone Chiaro",
+    "blonde": "Biondo",
+    "red": "Rosso",
+    "auburn": "Ramato",
+    "purple": "Viola",
+    "navy": "Blu Navy",
+    "charcoal": "Antracite",
+    "blue": "Blu",
+    "plum": "Prugna",
+    "forestGreen": "Verde Foresta",
+    "gold": "Oro",
+    "white": "Bianco",
+    "gray": "Grigio",
+    "select": "Scegli"
   }
 }

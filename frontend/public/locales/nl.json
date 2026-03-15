@@ -9,7 +9,10 @@
     "startSession": "Start Sessie",
     "avatarLawyer": "Advocaat",
     "avatarAuditor": "Auditor",
-    "avatarAssistant": "AI Assistent"
+    "avatarAssistant": "AI Assistent",
+    "searchLanguages": "Talen zoeken...",
+    "noLanguages": "Geen talen gevonden",
+    "selectLanguagePlaceholder": "Taal selecteren"
   },
   "nav": {
     "newAnalysis": "Nieuwe Analyse",
@@ -22,7 +25,11 @@
     "uploadHint": "Sleep en laat vallen of klik om te uploaden (PDF, DOCX, TXT)",
     "analyze": "Naleving Analyseren",
     "analyzing": "Analyseren...",
-    "micHint": "Klik om te spreken"
+    "micHint": "Klik om te spreken",
+    "generating": "Genereren...",
+    "generateSample": "Voorbeeld Genereren",
+    "generateError": "Kon geen tekst genereren. Zorg ervoor dat de backend draait.",
+    "backendError": "Kon de backend niet bereiken. Zorg ervoor dat de server draait op poort 8000."
   },
   "results": {
     "riskLevel": "Risiconiveau",
@@ -31,10 +38,47 @@
     "high": "Hoog Risico",
     "issues": "Problemen en Overtredingen",
     "recommendations": "Aanbevelingen",
-    "noResults": "Dien inhoud in om nalevingsanalyseresultaten te zien."
+    "noResults": "Dien inhoud in om nalevingsanalyseresultaten te zien.",
+    "relevantRegulations": "Relevante Regelgeving"
   },
   "advisor": {
     "greeting": "Hallo! Ik ben uw AI compliance adviseur. Plak inhoud of upload een document en ik analyseer het op nalevingsrisico's.",
     "thinking": "Uw inhoud wordt geanalyseerd..."
+  },
+  "customize": {
+    "gender": "Geslacht",
+    "skinTone": "Huidskleur",
+    "hairColor": "Haarkleur",
+    "shirtColor": "Overhemdkleur",
+    "pantsColor": "Broekkleur",
+    "male": "Man",
+    "female": "Vrouw"
+  },
+  "colors": {
+    "light": "Licht",
+    "fair": "Bleek",
+    "mediumLight": "Gemiddeld Licht",
+    "medium": "Gemiddeld",
+    "tan": "Gebruind",
+    "mediumDark": "Gemiddeld Donker",
+    "dark": "Donker",
+    "deep": "Diep",
+    "black": "Zwart",
+    "darkBrown": "Donkerbruin",
+    "brown": "Bruin",
+    "lightBrown": "Lichtbruin",
+    "blonde": "Blond",
+    "red": "Rood",
+    "auburn": "Kastanje",
+    "purple": "Paars",
+    "navy": "Marineblauw",
+    "charcoal": "Antraciet",
+    "blue": "Blauw",
+    "plum": "Pruim",
+    "forestGreen": "Bosgroen",
+    "gold": "Goud",
+    "white": "Wit",
+    "gray": "Grijs",
+    "select": "Kies"
   }
 }

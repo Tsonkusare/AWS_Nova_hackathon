@@ -9,7 +9,10 @@
     "startSession": "세션 시작",
     "avatarLawyer": "변호사",
     "avatarAuditor": "감사관",
-    "avatarAssistant": "AI 어시스턴트"
+    "avatarAssistant": "AI 어시스턴트",
+    "searchLanguages": "언어 검색...",
+    "noLanguages": "언어를 찾을 수 없습니다",
+    "selectLanguagePlaceholder": "언어 선택"
   },
   "nav": {
     "newAnalysis": "새 분석",
@@ -22,7 +25,11 @@
     "uploadHint": "드래그 앤 드롭하거나 클릭하여 업로드 (PDF, DOCX, TXT)",
     "analyze": "준수 분석",
     "analyzing": "분석 중...",
-    "micHint": "클릭하여 말하기"
+    "micHint": "클릭하여 말하기",
+    "generating": "생성 중...",
+    "generateSample": "샘플 생성",
+    "generateError": "텍스트를 생성할 수 없습니다. 백엔드가 실행 중인지 확인하세요.",
+    "backendError": "백엔드에 연결할 수 없습니다. 서버가 포트 8000에서 실행 중인지 확인하세요."
   },
   "results": {
     "riskLevel": "위험 수준",
@@ -31,10 +38,47 @@
     "high": "높은 위험",
     "issues": "문제 및 위반",
     "recommendations": "권장 사항",
-    "noResults": "준수 분석 결과를 보려면 콘텐츠를 제출하세요."
+    "noResults": "준수 분석 결과를 보려면 콘텐츠를 제출하세요.",
+    "relevantRegulations": "관련 규정"
   },
   "advisor": {
     "greeting": "안녕하세요! AI 준수 자문입니다. 콘텐츠를 붙여넣거나 문서를 업로드하시면 준수 위험을 분석하겠습니다.",
     "thinking": "콘텐츠 분석 중..."
+  },
+  "customize": {
+    "gender": "성별",
+    "skinTone": "피부색",
+    "hairColor": "머리색",
+    "shirtColor": "셔츠 색상",
+    "pantsColor": "바지 색상",
+    "male": "남성",
+    "female": "여성"
+  },
+  "colors": {
+    "light": "밝은",
+    "fair": "흰",
+    "mediumLight": "중간 밝은",
+    "medium": "중간",
+    "tan": "황갈색",
+    "mediumDark": "중간 어두운",
+    "dark": "어두운",
+    "deep": "깊은",
+    "black": "검정",
+    "darkBrown": "다크 브라운",
+    "brown": "갈색",
+    "lightBrown": "라이트 브라운",
+    "blonde": "금발",
+    "red": "빨강",
+    "auburn": "적갈색",
+    "purple": "보라",
+    "navy": "네이비",
+    "charcoal": "차콜",
+    "blue": "파랑",
+    "plum": "자주",
+    "forestGreen": "포레스트 그린",
+    "gold": "골드",
+    "white": "흰색",
+    "gray": "회색",
+    "select": "선택"
   }
 }

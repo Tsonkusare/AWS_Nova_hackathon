@@ -9,7 +9,10 @@
     "startSession": "Oturumu Başlat",
     "avatarLawyer": "Avukat",
     "avatarAuditor": "Denetçi",
-    "avatarAssistant": "AI Asistan"
+    "avatarAssistant": "AI Asistan",
+    "searchLanguages": "Dil ara...",
+    "noLanguages": "Dil bulunamadi",
+    "selectLanguagePlaceholder": "Dil secin"
   },
   "nav": {
     "newAnalysis": "Yeni Analiz",
@@ -22,7 +25,11 @@
     "uploadHint": "Sürükleyip bırakın veya yüklemek için tıklayın (PDF, DOCX, TXT)",
     "analyze": "Uyumluluk Analizi",
     "analyzing": "Analiz ediliyor...",
-    "micHint": "Konuşmak için tıklayın"
+    "micHint": "Konuşmak için tıklayın",
+    "generating": "Olusturuluyor...",
+    "generateSample": "Ornek Olustur",
+    "generateError": "Metin olusturulamadi. Arka ucun calistigindan emin olun.",
+    "backendError": "Arka uca ulasilamadi. Sunucunun 8000 portunda calistigindan emin olun."
   },
   "results": {
     "riskLevel": "Risk Seviyesi",
@@ -31,10 +38,47 @@
     "high": "Yüksek Risk",
     "issues": "Sorunlar ve İhlaller",
     "recommendations": "Öneriler",
-    "noResults": "Uyumluluk analizi sonuçlarını görmek için içerik gönderin."
+    "noResults": "Uyumluluk analizi sonuçlarını görmek için içerik gönderin.",
+    "relevantRegulations": "Ilgili Duzenlemeler"
   },
   "advisor": {
     "greeting": "Merhaba! Ben AI uyumluluk danışmanınızım. İçerik yapıştırın veya belge yükleyin, uyumluluk risklerini analiz edeyim.",
     "thinking": "İçeriğiniz analiz ediliyor..."
+  },
+  "customize": {
+    "gender": "Cinsiyet",
+    "skinTone": "Cilt Tonu",
+    "hairColor": "Sac Rengi",
+    "shirtColor": "Gomlek Rengi",
+    "pantsColor": "Pantolon Rengi",
+    "male": "Erkek",
+    "female": "Kadin"
+  },
+  "colors": {
+    "light": "Acik",
+    "fair": "Soluk",
+    "mediumLight": "Orta Acik",
+    "medium": "Orta",
+    "tan": "Bronz",
+    "mediumDark": "Orta Koyu",
+    "dark": "Koyu",
+    "deep": "Derin",
+    "black": "Siyah",
+    "darkBrown": "Koyu Kahve",
+    "brown": "Kahve",
+    "lightBrown": "Acik Kahve",
+    "blonde": "Sari",
+    "red": "Kirmizi",
+    "auburn": "Kumral",
+    "purple": "Mor",
+    "navy": "Lacivert",
+    "charcoal": "Antrasit",
+    "blue": "Mavi",
+    "plum": "Erik",
+    "forestGreen": "Orman Yesili",
+    "gold": "Altin",
+    "white": "Beyaz",
+    "gray": "Gri",
+    "select": "Sec"
   }
 }

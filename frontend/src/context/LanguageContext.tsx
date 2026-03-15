@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, type ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, useMemo, type ReactNode } from 'react';
 import type { Language } from '../types';
 
 interface Translations {
@@ -19,11 +19,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     fetch(`/locales/${language}.json`)
-      .then((res) => res.json())
-      .then((data) => setTranslations(data));
+      .then((res) => {
+        if (!res.ok) throw new Error(`Failed to load ${language}`);
+        return res.json();
+      })
+      .then((data) => setTranslations(data))
+      .catch(() => {
+        fetch('/locales/en.json')
+          .then((res) => res.json())
+          .then((data) => setTranslations(data));
+      });
   }, [language]);
 
-  function t(key: string): string {
+  const t = useCallback((key: string): string => {
     const keys = key.split('.');
     let result: string | Translations = translations;
     for (const k of keys) {
@@ -34,10 +42,12 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       }
     }
     return typeof result === 'string' ? result : key;
-  }
+  }, [translations]);
+
+  const value = useMemo(() => ({ language, setLanguage, t }), [language, t]);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={value}>
       {children}
     </LanguageContext.Provider>
   );

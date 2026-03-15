@@ -9,7 +9,10 @@
     "startSession": "Démarrer la Session",
     "avatarLawyer": "Avocat",
     "avatarAuditor": "Auditeur",
-    "avatarAssistant": "Assistant IA"
+    "avatarAssistant": "Assistant IA",
+    "searchLanguages": "Rechercher des langues...",
+    "noLanguages": "Aucune langue trouvee",
+    "selectLanguagePlaceholder": "Choisir la langue"
   },
   "nav": {
     "newAnalysis": "Nouvelle Analyse",
@@ -22,7 +25,11 @@
     "uploadHint": "Glissez-déposez ou cliquez pour télécharger (PDF, DOCX, TXT)",
     "analyze": "Analyser la Conformité",
     "analyzing": "Analyse en cours...",
-    "micHint": "Cliquez pour parler"
+    "micHint": "Cliquez pour parler",
+    "generating": "Generation...",
+    "generateSample": "Generer un Exemple",
+    "generateError": "Impossible de generer le texte. Verifiez que le backend fonctionne.",
+    "backendError": "Impossible de contacter le backend. Verifiez que le serveur fonctionne sur le port 8000."
   },
   "results": {
     "riskLevel": "Niveau de Risque",
@@ -31,10 +38,47 @@
     "high": "Risque Élevé",
     "issues": "Problèmes et Violations",
     "recommendations": "Recommandations",
-    "noResults": "Soumettez du contenu pour voir les résultats de l'analyse de conformité."
+    "noResults": "Soumettez du contenu pour voir les résultats de l'analyse de conformité.",
+    "relevantRegulations": "Reglementations Pertinentes"
   },
   "advisor": {
     "greeting": "Bonjour! Je suis votre conseiller de conformité IA. Collez du contenu ou téléchargez un document, et je l'analyserai pour détecter les risques de conformité.",
     "thinking": "Analyse de votre contenu..."
+  },
+  "customize": {
+    "gender": "Genre",
+    "skinTone": "Teint",
+    "hairColor": "Couleur des Cheveux",
+    "shirtColor": "Couleur du Haut",
+    "pantsColor": "Couleur du Pantalon",
+    "male": "Homme",
+    "female": "Femme"
+  },
+  "colors": {
+    "light": "Clair",
+    "fair": "Pale",
+    "mediumLight": "Moyen Clair",
+    "medium": "Moyen",
+    "tan": "Bronze",
+    "mediumDark": "Moyen Fonce",
+    "dark": "Fonce",
+    "deep": "Profond",
+    "black": "Noir",
+    "darkBrown": "Brun Fonce",
+    "brown": "Brun",
+    "lightBrown": "Brun Clair",
+    "blonde": "Blond",
+    "red": "Rouge",
+    "auburn": "Auburn",
+    "purple": "Violet",
+    "navy": "Bleu Marine",
+    "charcoal": "Anthracite",
+    "blue": "Bleu",
+    "plum": "Prune",
+    "forestGreen": "Vert Foret",
+    "gold": "Or",
+    "white": "Blanc",
+    "gray": "Gris",
+    "select": "Choisir"
   }
 }

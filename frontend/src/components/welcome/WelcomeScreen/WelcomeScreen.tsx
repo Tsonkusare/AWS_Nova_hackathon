@@ -29,6 +29,7 @@ const LANGUAGES = [
 ];
 
 function SearchableLanguageSelect({ value, onChange }: { value: string; onChange: (code: string) => void }) {
+  const { t } = useLanguage();
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
   const ref = useRef<HTMLDivElement>(null);
@@ -61,7 +62,7 @@ function SearchableLanguageSelect({ value, onChange }: { value: string; onChange
         onClick={() => { setOpen(!open); setSearch(''); }}
         className="w-full bg-white/10 border border-white/20 text-white rounded-lg px-4 py-2.5 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center justify-between"
       >
-        <span>{selected?.label || 'Select language'}</span>
+        <span>{selected?.label || t('welcome.selectLanguagePlaceholder')}</span>
         <svg className={`w-4 h-4 transition-transform ${open ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
@@ -75,13 +76,13 @@ function SearchableLanguageSelect({ value, onChange }: { value: string; onChange
               type="text"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search languages..."
+              placeholder={t('welcome.searchLanguages')}
               className="w-full bg-white/10 text-white text-sm rounded-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500 placeholder-slate-400"
             />
           </div>
           <div className="max-h-52 overflow-y-auto">
             {filtered.length === 0 ? (
-              <div className="px-4 py-3 text-sm text-slate-400">No languages found</div>
+              <div className="px-4 py-3 text-sm text-slate-400">{t('welcome.noLanguages')}</div>
             ) : (
               filtered.map((lang) => (
                 <button

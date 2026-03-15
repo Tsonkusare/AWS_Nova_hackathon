@@ -9,7 +9,10 @@
     "startSession": "开始会话",
     "avatarLawyer": "律师",
     "avatarAuditor": "审计师",
-    "avatarAssistant": "AI助手"
+    "avatarAssistant": "AI助手",
+    "searchLanguages": "搜索语言...",
+    "noLanguages": "未找到语言",
+    "selectLanguagePlaceholder": "选择语言"
   },
   "nav": {
     "newAnalysis": "新分析",
@@ -22,7 +25,11 @@
     "uploadHint": "拖放或点击上传（PDF、DOCX、TXT）",
     "analyze": "分析合规性",
     "analyzing": "分析中...",
-    "micHint": "点击说话"
+    "micHint": "点击说话",
+    "generating": "生成中...",
+    "generateSample": "生成示例",
+    "generateError": "无法生成文本。请确保后端正在运行。",
+    "backendError": "无法连接后端。请确保服务器在端口8000上运行。"
   },
   "results": {
     "riskLevel": "风险等级",
@@ -31,10 +38,47 @@
     "high": "高风险",
     "issues": "问题与违规",
     "recommendations": "建议",
-    "noResults": "提交内容以查看合规分析结果。"
+    "noResults": "提交内容以查看合规分析结果。",
+    "relevantRegulations": "相关法规"
   },
   "advisor": {
     "greeting": "您好！我是您的AI合规顾问。粘贴一些内容或上传文档，我将分析其合规风险。",
     "thinking": "正在分析您的内容..."
+  },
+  "customize": {
+    "gender": "性别",
+    "skinTone": "肤色",
+    "hairColor": "发色",
+    "shirtColor": "上衣颜色",
+    "pantsColor": "裤子颜色",
+    "male": "男",
+    "female": "女"
+  },
+  "colors": {
+    "light": "浅色",
+    "fair": "白皙",
+    "mediumLight": "中浅",
+    "medium": "中等",
+    "tan": "棕褐",
+    "mediumDark": "中深",
+    "dark": "深色",
+    "deep": "极深",
+    "black": "黑色",
+    "darkBrown": "深棕",
+    "brown": "棕色",
+    "lightBrown": "浅棕",
+    "blonde": "金色",
+    "red": "红色",
+    "auburn": "赤褐",
+    "purple": "紫色",
+    "navy": "海军蓝",
+    "charcoal": "炭灰",
+    "blue": "蓝色",
+    "plum": "梅色",
+    "forestGreen": "森林绿",
+    "gold": "金色",
+    "white": "白色",
+    "gray": "灰色",
+    "select": "选择"
   }
 }

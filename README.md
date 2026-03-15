@@ -1,55 +1,78 @@
-# AI Compliance Advisor
+# AI Regulation Copilot
 
-A generative AI application using Amazon Nova on AWS that audits AI-generated content for compliance risks. Users can paste text, upload documents, or use voice input to submit content for analysis. The AI advisor provides risk levels, identifies violations, and suggests fixes in the user's selected language.
+AI Regulation Copilot is a hackathon project built for the Amazon Nova AI Hackathon. The app helps founders and teams quickly assess an AI product for likely governance and compliance risks using Amazon Nova on AWS.
 
-## Tech Stack
+The current implementation includes:
+- a FastAPI backend
+- PostgreSQL for project and analysis records
+- Amazon Bedrock with Amazon Nova 2 Lite for compliance-style analysis
+- Swagger UI for local API testing
 
-- **Frontend**: React + Tailwind CSS + Vite + TypeScript
-- **Backend**: TBD (Amazon Nova via AWS Bedrock)
-- **AI Model**: Amazon Nova (Nova 2 Lite / Nova 2 Sonic)
+## Current project status
 
-## Project Structure
+The backend is working locally for the core flow:
+1. create a project
+2. retrieve a project
+3. analyze the project with Amazon Nova
 
+The regulation SQL dataset is still being normalized for PostgreSQL. The Nova-backed project analysis flow is the current priority and is the most stable path for demos.
+
+## Backend features
+
+Implemented endpoints:
+- `GET /` – health check
+- `POST /projects/` – create a project
+- `GET /projects/{project_id}` – fetch a project
+- `POST /projects/{project_id}/analyze` – run Amazon Nova analysis and save the result
+
+## Tech stack
+
+- **Frontend:** React + Vite + TypeScript + Tailwind CSS
+- **Backend:** FastAPI + SQLAlchemy
+- **Database:** PostgreSQL
+- **AI:** Amazon Bedrock + Amazon Nova 2 Lite
+- **Cloud:** AWS
+
+## Project structure
+
+```text
+FRONTEND/   React frontend
+BACKEND/    FastAPI backend, SQL models, and data scripts
 ```
-frontend/       # React frontend application
-backend/        # Backend API (TBD)
-```
 
-## Getting Started
+## Quick start
 
 ### Frontend
+
 ```bash
-cd frontend
+cd FRONTEND
 npm install
 npm run dev
 ```
 
 ### Backend
-TBD
 
-## Uncommitted Changes — Backend
+See the detailed backend setup guide in `BACKEND/Readme`.
 
-### Modified Files
+## Demo flow
 
-- **`BACKEND/app.py`** — Added routers for analyze, generate, regulation, and bill routes; startup DB init and bill cache loading
-- **`BACKEND/config.py`** — Updated configuration settings
-- **`BACKEND/db/connection.py`** — Updated database connection setup
-- **`BACKEND/db/init_db.py`** — Expanded DB initialization with table creation and regulation seeding
-- **`BACKEND/models/analysis.py`** — Updated analysis model fields
-- **`BACKEND/routes/regulation_routes.py`** — Updated regulation endpoints
-- **`BACKEND/.env`** — Updated environment variables
+1. Start the backend
+2. Open `http://127.0.0.1:8000/docs`
+3. Create a project with `POST /projects/`
+4. Run `POST /projects/{project_id}/analyze`
+5. Review the returned frameworks, risk level, concerns, and next actions
 
-### New Files
+## Notes
 
-- **`BACKEND/routes/analyze_routes.py`** — Text and file analysis endpoints
-- **`BACKEND/routes/bill_routes.py`** — Bill listing and search endpoints
-- **`BACKEND/routes/generate_routes.py`** — Text generation endpoint
-- **`BACKEND/services/bill_loader.py`** — Bill data loader service
-- **`BACKEND/data/bills_cache.json`** — Cached bill data (136 bills)
-- **`BACKEND/data/copilot.db`** — SQLite database
+- The backend expects local PostgreSQL access through a `.env` file.
+- Amazon Nova access requires valid AWS credentials and Bedrock permissions.
+- Do not commit `.env`, `__pycache__`, or other local artifacts to the repository.
 
-## Team Work Log
+## Recommended `.gitignore`
 
-See individual logs:
-- [Frontend Log](./FRONTEND.md)
-- [Backend Log](./BACKEND.md)
+```gitignore
+.env
+__pycache__/
+*.pyc
+.DS_Store
+```

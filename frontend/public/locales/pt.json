@@ -9,7 +9,10 @@
     "startSession": "Iniciar Sessão",
     "avatarLawyer": "Advogado",
     "avatarAuditor": "Auditor",
-    "avatarAssistant": "Assistente IA"
+    "avatarAssistant": "Assistente IA",
+    "searchLanguages": "Pesquisar idiomas...",
+    "noLanguages": "Nenhum idioma encontrado",
+    "selectLanguagePlaceholder": "Selecionar idioma"
   },
   "nav": {
     "newAnalysis": "Nova Análise",
@@ -22,7 +25,11 @@
     "uploadHint": "Arraste e solte ou clique para enviar (PDF, DOCX, TXT)",
     "analyze": "Analisar Conformidade",
     "analyzing": "Analisando...",
-    "micHint": "Clique para falar"
+    "micHint": "Clique para falar",
+    "generating": "Gerando...",
+    "generateSample": "Gerar Exemplo",
+    "generateError": "Nao foi possivel gerar texto. Certifique-se de que o backend esta funcionando.",
+    "backendError": "Nao foi possivel conectar ao backend. Certifique-se de que o servidor esta funcionando na porta 8000."
   },
   "results": {
     "riskLevel": "Nível de Risco",
@@ -31,10 +38,47 @@
     "high": "Risco Alto",
     "issues": "Problemas e Violações",
     "recommendations": "Recomendações",
-    "noResults": "Envie conteúdo para ver os resultados da análise de conformidade."
+    "noResults": "Envie conteúdo para ver os resultados da análise de conformidade.",
+    "relevantRegulations": "Regulamentacoes Relevantes"
   },
   "advisor": {
     "greeting": "Olá! Sou seu consultor de conformidade de IA. Cole algum conteúdo ou envie um documento, e eu o analisarei para detectar riscos de conformidade.",
     "thinking": "Analisando seu conteúdo..."
+  },
+  "customize": {
+    "gender": "Genero",
+    "skinTone": "Tom de Pele",
+    "hairColor": "Cor do Cabelo",
+    "shirtColor": "Cor da Camisa",
+    "pantsColor": "Cor da Calca",
+    "male": "Masculino",
+    "female": "Feminino"
+  },
+  "colors": {
+    "light": "Claro",
+    "fair": "Palido",
+    "mediumLight": "Medio Claro",
+    "medium": "Medio",
+    "tan": "Bronzeado",
+    "mediumDark": "Medio Escuro",
+    "dark": "Escuro",
+    "deep": "Profundo",
+    "black": "Preto",
+    "darkBrown": "Castanho Escuro",
+    "brown": "Castanho",
+    "lightBrown": "Castanho Claro",
+    "blonde": "Loiro",
+    "red": "Vermelho",
+    "auburn": "Ruivo",
+    "purple": "Roxo",
+    "navy": "Azul Marinho",
+    "charcoal": "Carvao",
+    "blue": "Azul",
+    "plum": "Ameixa",
+    "forestGreen": "Verde Floresta",
+    "gold": "Dourado",
+    "white": "Branco",
+    "gray": "Cinza",
+    "select": "Selecionar"
   }
 }

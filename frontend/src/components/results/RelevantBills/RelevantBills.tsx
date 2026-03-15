@@ -13,7 +13,7 @@ export default function RelevantBills() {
     <div className="bg-white/5 rounded-xl p-5 border border-white/10">
       <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
         <span className="w-2 h-2 bg-blue-400 rounded-full" />
-        {t('results.relevantBills') || 'Relevant Regulations'}
+        {t('results.relevantRegulations')}
       </h3>
       <div className="space-y-3">
         {analysisResult.relevantBills.map((bill, i) => (

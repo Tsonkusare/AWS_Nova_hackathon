@@ -9,7 +9,10 @@
     "startSession": "Starta Session",
     "avatarLawyer": "Advokat",
     "avatarAuditor": "Revisor",
-    "avatarAssistant": "AI Assistent"
+    "avatarAssistant": "AI Assistent",
+    "searchLanguages": "Sok sprak...",
+    "noLanguages": "Inga sprak hittades",
+    "selectLanguagePlaceholder": "Valj sprak"
   },
   "nav": {
     "newAnalysis": "Ny Analys",
@@ -22,7 +25,11 @@
     "uploadHint": "Dra och släpp eller klicka för att ladda upp (PDF, DOCX, TXT)",
     "analyze": "Analysera Efterlevnad",
     "analyzing": "Analyserar...",
-    "micHint": "Klicka för att tala"
+    "micHint": "Klicka för att tala",
+    "generating": "Genererar...",
+    "generateSample": "Generera Exempel",
+    "generateError": "Kunde inte generera text. Se till att backend kors.",
+    "backendError": "Kunde inte na backend. Se till att servern kors pa port 8000."
   },
   "results": {
     "riskLevel": "Risknivå",
@@ -31,10 +38,47 @@
     "high": "Hög Risk",
     "issues": "Problem och Överträdelser",
     "recommendations": "Rekommendationer",
-    "noResults": "Skicka in innehåll för att se resultaten av efterlevnadsanalysen."
+    "noResults": "Skicka in innehåll för att se resultaten av efterlevnadsanalysen.",
+    "relevantRegulations": "Relevanta Foreskrifter"
   },
   "advisor": {
     "greeting": "Hej! Jag är din AI-efterlevnadsrådgivare. Klistra in innehåll eller ladda upp ett dokument så analyserar jag det för efterlevnadsrisker.",
     "thinking": "Analyserar ditt innehåll..."
+  },
+  "customize": {
+    "gender": "Kon",
+    "skinTone": "Hudfarg",
+    "hairColor": "Harfarg",
+    "shirtColor": "Skjortfarg",
+    "pantsColor": "Byxfarg",
+    "male": "Man",
+    "female": "Kvinna"
+  },
+  "colors": {
+    "light": "Ljus",
+    "fair": "Blek",
+    "mediumLight": "Medel Ljus",
+    "medium": "Medel",
+    "tan": "Solbrand",
+    "mediumDark": "Medel Mork",
+    "dark": "Mork",
+    "deep": "Djup",
+    "black": "Svart",
+    "darkBrown": "Morkbrun",
+    "brown": "Brun",
+    "lightBrown": "Ljusbrun",
+    "blonde": "Blond",
+    "red": "Rod",
+    "auburn": "Kastanj",
+    "purple": "Lila",
+    "navy": "Marinbla",
+    "charcoal": "Antracit",
+    "blue": "Bla",
+    "plum": "Plommon",
+    "forestGreen": "Skogsgron",
+    "gold": "Guld",
+    "white": "Vit",
+    "gray": "Gra",
+    "select": "Valj"
   }
 }

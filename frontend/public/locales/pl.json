@@ -9,7 +9,10 @@
     "startSession": "Rozpocznij Sesję",
     "avatarLawyer": "Prawnik",
     "avatarAuditor": "Audytor",
-    "avatarAssistant": "Asystent AI"
+    "avatarAssistant": "Asystent AI",
+    "searchLanguages": "Szukaj jezykow...",
+    "noLanguages": "Nie znaleziono jezykow",
+    "selectLanguagePlaceholder": "Wybierz jezyk"
   },
   "nav": {
     "newAnalysis": "Nowa Analiza",
@@ -22,7 +25,11 @@
     "uploadHint": "Przeciągnij i upuść lub kliknij, aby przesłać (PDF, DOCX, TXT)",
     "analyze": "Analizuj Zgodność",
     "analyzing": "Analizowanie...",
-    "micHint": "Kliknij, aby mówić"
+    "micHint": "Kliknij, aby mówić",
+    "generating": "Generowanie...",
+    "generateSample": "Generuj Przyklad",
+    "generateError": "Nie udalo sie wygenerowac tekstu. Upewnij sie, ze backend dziala.",
+    "backendError": "Nie mozna polaczyc sie z backendem. Upewnij sie, ze serwer dziala na porcie 8000."
   },
   "results": {
     "riskLevel": "Poziom Ryzyka",
@@ -31,10 +38,47 @@
     "high": "Wysokie Ryzyko",
     "issues": "Problemy i Naruszenia",
     "recommendations": "Zalecenia",
-    "noResults": "Prześlij treść, aby zobaczyć wyniki analizy zgodności."
+    "noResults": "Prześlij treść, aby zobaczyć wyniki analizy zgodności.",
+    "relevantRegulations": "Odpowiednie Przepisy"
   },
   "advisor": {
     "greeting": "Cześć! Jestem twoim doradcą zgodności AI. Wklej treść lub prześlij dokument, a przeanalizuję go pod kątem ryzyk zgodności.",
     "thinking": "Analizuję twoją treść..."
+  },
+  "customize": {
+    "gender": "Plec",
+    "skinTone": "Odcien Skory",
+    "hairColor": "Kolor Wlosow",
+    "shirtColor": "Kolor Koszuli",
+    "pantsColor": "Kolor Spodni",
+    "male": "Mezczyzna",
+    "female": "Kobieta"
+  },
+  "colors": {
+    "light": "Jasny",
+    "fair": "Blady",
+    "mediumLight": "Sredni Jasny",
+    "medium": "Sredni",
+    "tan": "Opalony",
+    "mediumDark": "Sredni Ciemny",
+    "dark": "Ciemny",
+    "deep": "Gleboki",
+    "black": "Czarny",
+    "darkBrown": "Ciemny Braz",
+    "brown": "Braz",
+    "lightBrown": "Jasny Braz",
+    "blonde": "Blond",
+    "red": "Czerwony",
+    "auburn": "Kasztanowy",
+    "purple": "Fioletowy",
+    "navy": "Granatowy",
+    "charcoal": "Antracyt",
+    "blue": "Niebieski",
+    "plum": "Sliwkowy",
+    "forestGreen": "Lesna Zielen",
+    "gold": "Zloty",
+    "white": "Bialy",
+    "gray": "Szary",
+    "select": "Wybierz"
   }
 }

@@ -18,7 +18,7 @@ export default function TextInput() {
       const result = await generateText(category);
       setInputText(result.text);
     } catch {
-      setError('Could not generate text. Make sure the backend is running.');
+      setError(t('input.generateError'));
     } finally {
       setIsGenerating(false);
     }
@@ -38,7 +38,7 @@ export default function TextInput() {
           disabled={isGenerating}
           className="px-3 py-1.5 text-xs font-medium rounded-lg bg-purple-600 hover:bg-purple-500 text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isGenerating ? 'Generating...' : 'Generate Sample'}
+          {isGenerating ? t('input.generating') : t('input.generateSample')}
         </button>
         {CATEGORIES.map((cat) => (
           <button

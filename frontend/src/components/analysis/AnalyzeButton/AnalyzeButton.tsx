@@ -22,7 +22,7 @@ export default function AnalyzeButton() {
       }
       setAnalysisResult(result);
     } catch (err) {
-      setError('Could not reach the backend. Make sure the server is running on port 8000.');
+      setError(t('input.backendError'));
     } finally {
       setIsAnalyzing(false);
     }

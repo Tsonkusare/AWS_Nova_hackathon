@@ -9,7 +9,10 @@
     "startSession": "Sitzung Starten",
     "avatarLawyer": "Anwalt",
     "avatarAuditor": "Prüfer",
-    "avatarAssistant": "KI-Assistent"
+    "avatarAssistant": "KI-Assistent",
+    "searchLanguages": "Sprachen suchen...",
+    "noLanguages": "Keine Sprachen gefunden",
+    "selectLanguagePlaceholder": "Sprache wahlen"
   },
   "nav": {
     "newAnalysis": "Neue Analyse",
@@ -22,7 +25,11 @@
     "uploadHint": "Ziehen und ablegen oder klicken zum Hochladen (PDF, DOCX, TXT)",
     "analyze": "Compliance Analysieren",
     "analyzing": "Analysiert...",
-    "micHint": "Klicken zum Sprechen"
+    "micHint": "Klicken zum Sprechen",
+    "generating": "Wird generiert...",
+    "generateSample": "Beispiel Generieren",
+    "generateError": "Text konnte nicht generiert werden. Stellen Sie sicher, dass das Backend lauft.",
+    "backendError": "Backend nicht erreichbar. Stellen Sie sicher, dass der Server auf Port 8000 lauft."
   },
   "results": {
     "riskLevel": "Risikostufe",
@@ -31,10 +38,47 @@
     "high": "Hohes Risiko",
     "issues": "Probleme und Verstöße",
     "recommendations": "Empfehlungen",
-    "noResults": "Reichen Sie Inhalte ein, um die Ergebnisse der Compliance-Analyse zu sehen."
+    "noResults": "Reichen Sie Inhalte ein, um die Ergebnisse der Compliance-Analyse zu sehen.",
+    "relevantRegulations": "Relevante Vorschriften"
   },
   "advisor": {
     "greeting": "Hallo! Ich bin Ihr KI-Compliance-Berater. Fügen Sie Inhalte ein oder laden Sie ein Dokument hoch, und ich werde es auf Compliance-Risiken analysieren.",
     "thinking": "Ihr Inhalt wird analysiert..."
+  },
+  "customize": {
+    "gender": "Geschlecht",
+    "skinTone": "Hautton",
+    "hairColor": "Haarfarbe",
+    "shirtColor": "Hemdfarbe",
+    "pantsColor": "Hosenfarbe",
+    "male": "Mannlich",
+    "female": "Weiblich"
+  },
+  "colors": {
+    "light": "Hell",
+    "fair": "Blass",
+    "mediumLight": "Mittel Hell",
+    "medium": "Mittel",
+    "tan": "Gebraunt",
+    "mediumDark": "Mittel Dunkel",
+    "dark": "Dunkel",
+    "deep": "Tief",
+    "black": "Schwarz",
+    "darkBrown": "Dunkelbraun",
+    "brown": "Braun",
+    "lightBrown": "Hellbraun",
+    "blonde": "Blond",
+    "red": "Rot",
+    "auburn": "Kastanie",
+    "purple": "Lila",
+    "navy": "Marineblau",
+    "charcoal": "Anthrazit",
+    "blue": "Blau",
+    "plum": "Pflaume",
+    "forestGreen": "Waldgrun",
+    "gold": "Gold",
+    "white": "Weiss",
+    "gray": "Grau",
+    "select": "Wahlen"
   }
 }

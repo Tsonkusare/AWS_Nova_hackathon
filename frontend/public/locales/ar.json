@@ -9,7 +9,10 @@
     "startSession": "بدء الجلسة",
     "avatarLawyer": "محامي",
     "avatarAuditor": "مدقق",
-    "avatarAssistant": "مساعد ذكاء اصطناعي"
+    "avatarAssistant": "مساعد ذكاء اصطناعي",
+    "searchLanguages": "البحث عن لغات...",
+    "noLanguages": "لم يتم العثور على لغات",
+    "selectLanguagePlaceholder": "اختر اللغة"
   },
   "nav": {
     "newAnalysis": "تحليل جديد",
@@ -22,7 +25,11 @@
     "uploadHint": "اسحب وأفلت أو انقر للتحميل (PDF، DOCX، TXT)",
     "analyze": "تحليل الامتثال",
     "analyzing": "جارٍ التحليل...",
-    "micHint": "انقر للتحدث"
+    "micHint": "انقر للتحدث",
+    "generating": "جاري التوليد...",
+    "generateSample": "توليد عينة",
+    "generateError": "تعذر توليد النص. تأكد من أن الخادم الخلفي يعمل.",
+    "backendError": "تعذر الوصول إلى الخادم الخلفي. تأكد من أن الخادم يعمل على المنفذ 8000."
   },
   "results": {
     "riskLevel": "مستوى المخاطر",
@@ -31,10 +38,47 @@
     "high": "مخاطر عالية",
     "issues": "المشاكل والانتهاكات",
     "recommendations": "التوصيات",
-    "noResults": "أرسل المحتوى لرؤية نتائج تحليل الامتثال."
+    "noResults": "أرسل المحتوى لرؤية نتائج تحليل الامتثال.",
+    "relevantRegulations": "اللوائح ذات الصلة"
   },
   "advisor": {
     "greeting": "مرحباً! أنا مستشار الامتثال بالذكاء الاصطناعي. الصق بعض المحتوى أو حمّل مستنداً وسأحلله لاكتشاف مخاطر الامتثال.",
     "thinking": "جارٍ تحليل المحتوى..."
+  },
+  "customize": {
+    "gender": "الجنس",
+    "skinTone": "لون البشرة",
+    "hairColor": "لون الشعر",
+    "shirtColor": "لون القميص",
+    "pantsColor": "لون البنطال",
+    "male": "ذكر",
+    "female": "أنثى"
+  },
+  "colors": {
+    "light": "فاتح",
+    "fair": "أبيض",
+    "mediumLight": "متوسط فاتح",
+    "medium": "متوسط",
+    "tan": "أسمر",
+    "mediumDark": "متوسط داكن",
+    "dark": "داكن",
+    "deep": "عميق",
+    "black": "أسود",
+    "darkBrown": "بني داكن",
+    "brown": "بني",
+    "lightBrown": "بني فاتح",
+    "blonde": "أشقر",
+    "red": "أحمر",
+    "auburn": "كستنائي",
+    "purple": "بنفسجي",
+    "navy": "كحلي",
+    "charcoal": "فحمي",
+    "blue": "أزرق",
+    "plum": "برقوقي",
+    "forestGreen": "أخضر غابي",
+    "gold": "ذهبي",
+    "white": "أبيض",
+    "gray": "رمادي",
+    "select": "اختر"
   }
 }

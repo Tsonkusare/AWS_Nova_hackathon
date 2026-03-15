@@ -9,7 +9,10 @@
     "startSession": "Bắt Đầu Phiên",
     "avatarLawyer": "Luật Sư",
     "avatarAuditor": "Kiểm Toán Viên",
-    "avatarAssistant": "Trợ Lý AI"
+    "avatarAssistant": "Trợ Lý AI",
+    "searchLanguages": "Tim kiem ngon ngu...",
+    "noLanguages": "Khong tim thay ngon ngu",
+    "selectLanguagePlaceholder": "Chon ngon ngu"
   },
   "nav": {
     "newAnalysis": "Phân Tích Mới",
@@ -22,7 +25,11 @@
     "uploadHint": "Kéo và thả hoặc nhấp để tải lên (PDF, DOCX, TXT)",
     "analyze": "Phân Tích Tuân Thủ",
     "analyzing": "Đang phân tích...",
-    "micHint": "Nhấp để nói"
+    "micHint": "Nhấp để nói",
+    "generating": "Dang tao...",
+    "generateSample": "Tao Mau",
+    "generateError": "Khong the tao van ban. Dam bao rang backend dang chay.",
+    "backendError": "Khong the ket noi backend. Dam bao rang server dang chay tren cong 8000."
   },
   "results": {
     "riskLevel": "Mức Độ Rủi Ro",
@@ -31,10 +38,47 @@
     "high": "Rủi Ro Cao",
     "issues": "Vấn Đề và Vi Phạm",
     "recommendations": "Khuyến Nghị",
-    "noResults": "Gửi nội dung để xem kết quả phân tích tuân thủ."
+    "noResults": "Gửi nội dung để xem kết quả phân tích tuân thủ.",
+    "relevantRegulations": "Quy Dinh Lien Quan"
   },
   "advisor": {
     "greeting": "Xin chào! Tôi là cố vấn tuân thủ AI. Dán nội dung hoặc tải lên tài liệu, tôi sẽ phân tích rủi ro tuân thủ.",
     "thinking": "Đang phân tích nội dung..."
+  },
+  "customize": {
+    "gender": "Gioi tinh",
+    "skinTone": "Mau Da",
+    "hairColor": "Mau Toc",
+    "shirtColor": "Mau Ao",
+    "pantsColor": "Mau Quan",
+    "male": "Nam",
+    "female": "Nu"
+  },
+  "colors": {
+    "light": "Sang",
+    "fair": "Trang",
+    "mediumLight": "Trung binh sang",
+    "medium": "Trung binh",
+    "tan": "Ram nang",
+    "mediumDark": "Trung binh dam",
+    "dark": "Dam",
+    "deep": "Sau",
+    "black": "Den",
+    "darkBrown": "Nau dam",
+    "brown": "Nau",
+    "lightBrown": "Nau nhat",
+    "blonde": "Vang",
+    "red": "Do",
+    "auburn": "Nau do",
+    "purple": "Tim",
+    "navy": "Xanh hai quan",
+    "charcoal": "Than",
+    "blue": "Xanh",
+    "plum": "Man",
+    "forestGreen": "Xanh rung",
+    "gold": "Vang kim",
+    "white": "Trang",
+    "gray": "Xam",
+    "select": "Chon"
   }
 }

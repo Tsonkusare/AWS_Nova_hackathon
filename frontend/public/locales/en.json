@@ -9,7 +9,10 @@
     "startSession": "Start Session",
     "avatarLawyer": "Lawyer",
     "avatarAuditor": "Auditor",
-    "avatarAssistant": "AI Assistant"
+    "avatarAssistant": "AI Assistant",
+    "searchLanguages": "Search languages...",
+    "noLanguages": "No languages found",
+    "selectLanguagePlaceholder": "Select language"
   },
   "nav": {
     "newAnalysis": "New Analysis",
@@ -22,7 +25,11 @@
     "uploadHint": "Drag & drop or click to upload (PDF, DOCX, TXT)",
     "analyze": "Analyze Compliance",
     "analyzing": "Analyzing...",
-    "micHint": "Click to speak"
+    "micHint": "Click to speak",
+    "generating": "Generating...",
+    "generateSample": "Generate Sample",
+    "generateError": "Could not generate text. Make sure the backend is running.",
+    "backendError": "Could not reach the backend. Make sure the server is running on port 8000."
   },
   "results": {
     "riskLevel": "Risk Level",
@@ -31,10 +38,47 @@
     "high": "High Risk",
     "issues": "Issues & Violations",
     "recommendations": "Recommendations",
-    "noResults": "Submit content to see compliance analysis results."
+    "noResults": "Submit content to see compliance analysis results.",
+    "relevantRegulations": "Relevant Regulations"
   },
   "advisor": {
     "greeting": "Hello! I'm your AI compliance advisor. Paste some content or upload a document, and I'll analyze it for compliance risks.",
     "thinking": "Analyzing your content..."
+  },
+  "customize": {
+    "gender": "Gender",
+    "skinTone": "Skin Tone",
+    "hairColor": "Hair Color",
+    "shirtColor": "Shirt Color",
+    "pantsColor": "Pants Color",
+    "male": "Male",
+    "female": "Female"
+  },
+  "colors": {
+    "light": "Light",
+    "fair": "Fair",
+    "mediumLight": "Medium Light",
+    "medium": "Medium",
+    "tan": "Tan",
+    "mediumDark": "Medium Dark",
+    "dark": "Dark",
+    "deep": "Deep",
+    "black": "Black",
+    "darkBrown": "Dark Brown",
+    "brown": "Brown",
+    "lightBrown": "Light Brown",
+    "blonde": "Blonde",
+    "red": "Red",
+    "auburn": "Auburn",
+    "purple": "Purple",
+    "navy": "Navy",
+    "charcoal": "Charcoal",
+    "blue": "Blue",
+    "plum": "Plum",
+    "forestGreen": "Forest Green",
+    "gold": "Gold",
+    "white": "White",
+    "gray": "Gray",
+    "select": "Select"
   }
 }

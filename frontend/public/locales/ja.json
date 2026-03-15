@@ -9,7 +9,10 @@
     "startSession": "セッション開始",
     "avatarLawyer": "弁護士",
     "avatarAuditor": "監査人",
-    "avatarAssistant": "AIアシスタント"
+    "avatarAssistant": "AIアシスタント",
+    "searchLanguages": "言語を検索...",
+    "noLanguages": "言語が見つかりません",
+    "selectLanguagePlaceholder": "言語を選択"
   },
   "nav": {
     "newAnalysis": "新しい分析",
@@ -22,7 +25,11 @@
     "uploadHint": "ドラッグ＆ドロップまたはクリックしてアップロード（PDF、DOCX、TXT）",
     "analyze": "コンプライアンス分析",
     "analyzing": "分析中...",
-    "micHint": "クリックして話す"
+    "micHint": "クリックして話す",
+    "generating": "生成中...",
+    "generateSample": "サンプル生成",
+    "generateError": "テキストを生成できませんでした。バックエンドが稼働していることを確認してください。",
+    "backendError": "バックエンドに接続できません。サーバーがポート8000で稼働していることを確認してください。"
   },
   "results": {
     "riskLevel": "リスクレベル",
@@ -31,10 +38,47 @@
     "high": "高リスク",
     "issues": "問題と違反",
     "recommendations": "推奨事項",
-    "noResults": "コンプライアンス分析結果を表示するにはコンテンツを送信してください。"
+    "noResults": "コンプライアンス分析結果を表示するにはコンテンツを送信してください。",
+    "relevantRegulations": "関連規制"
   },
   "advisor": {
     "greeting": "こんにちは！AIコンプライアンスアドバイザーです。コンテンツを貼り付けるかドキュメントをアップロードしてください。コンプライアンスリスクを分析します。",
     "thinking": "コンテンツを分析中..."
+  },
+  "customize": {
+    "gender": "性別",
+    "skinTone": "肌の色",
+    "hairColor": "髪の色",
+    "shirtColor": "シャツの色",
+    "pantsColor": "パンツの色",
+    "male": "男性",
+    "female": "女性"
+  },
+  "colors": {
+    "light": "明るい",
+    "fair": "色白",
+    "mediumLight": "やや明るい",
+    "medium": "中間",
+    "tan": "日焼け",
+    "mediumDark": "やや暗い",
+    "dark": "暗い",
+    "deep": "深い",
+    "black": "黒",
+    "darkBrown": "ダークブラウン",
+    "brown": "茶色",
+    "lightBrown": "ライトブラウン",
+    "blonde": "ブロンド",
+    "red": "赤",
+    "auburn": "赤茶",
+    "purple": "紫",
+    "navy": "ネイビー",
+    "charcoal": "チャコール",
+    "blue": "青",
+    "plum": "プラム",
+    "forestGreen": "フォレストグリーン",
+    "gold": "ゴールド",
+    "white": "白",
+    "gray": "グレー",
+    "select": "選択"
   }
 }

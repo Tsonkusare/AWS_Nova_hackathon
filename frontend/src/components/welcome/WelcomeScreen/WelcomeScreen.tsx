@@ -10,22 +10,9 @@ import type { AvatarConfig } from '../../../types';
 const LANGUAGES = [
   { code: 'en', label: 'English' },
   { code: 'es', label: 'Spanish - Español' },
-  { code: 'fr', label: 'French - Français' },
   { code: 'de', label: 'German - Deutsch' },
-  { code: 'pt', label: 'Portuguese - Português' },
-  { code: 'zh', label: 'Chinese - 中文' },
-  { code: 'ja', label: 'Japanese - 日本語' },
-  { code: 'ko', label: 'Korean - 한국어' },
-  { code: 'hi', label: 'Hindi - हिन्दी' },
-  { code: 'ar', label: 'Arabic - العربية' },
-  { code: 'ru', label: 'Russian - Русский' },
   { code: 'it', label: 'Italian - Italiano' },
-  { code: 'nl', label: 'Dutch - Nederlands' },
-  { code: 'tr', label: 'Turkish - Türkçe' },
-  { code: 'pl', label: 'Polish - Polski' },
-  { code: 'sv', label: 'Swedish - Svenska' },
-  { code: 'th', label: 'Thai - ไทย' },
-  { code: 'vi', label: 'Vietnamese - Tiếng Việt' },
+  { code: 'fr', label: 'French - Français' },
 ];
 
 function SearchableLanguageSelect({ value, onChange }: { value: string; onChange: (code: string) => void }) {
@@ -132,8 +119,8 @@ export default function WelcomeScreen() {
         <div>
           <label className="text-sm text-slate-300 block mb-3">{t('welcome.selectAvatar')}</label>
           <div className="flex flex-col lg:flex-row gap-6">
-            <div className="lg:w-1/2 bg-white/5 border border-white/10 rounded-xl">
-              <AvatarScene config={localConfig} size="h-80" />
+            <div className="lg:w-1/2 bg-white/5 border border-white/10 rounded-xl" style={{ height: '320px' }}>
+              <AvatarScene config={localConfig} />
             </div>
             <div className="lg:w-1/2">
               <AvatarCustomizer config={localConfig} onChange={setLocalConfig} />

@@ -29,7 +29,10 @@
     "generating": "Generation...",
     "generateSample": "Generer un Exemple",
     "generateError": "Impossible de generer le texte. Verifiez que le backend fonctionne.",
-    "backendError": "Impossible de contacter le backend. Verifiez que le serveur fonctionne sur le port 8000."
+    "backendError": "Impossible de contacter le backend. Verifiez que le serveur fonctionne sur le port 8000.",
+    "listening": "Écoute...",
+    "unsupportedLanguage": "Cette langue n'est pas prise en charge. Veuillez utiliser l'anglais, l'espagnol, l'allemand, l'italien ou le français.",
+    "translating": "Traduction..."
   },
   "results": {
     "riskLevel": "Niveau de Risque",

@@ -38,21 +38,35 @@ class AnalyzeResponse(BaseModel):
 
 
 def _translate_to_english(text: str, language: str) -> str:
-    if not _translation_layer or language == "en":
+    if language == "en":
         return text
+    if _translation_layer:
+        try:
+            _translation_layer.set_language(language)
+            return _translation_layer.to_english(text)
+        except Exception:
+            pass
+    # Fallback to deep-translator
     try:
-        _translation_layer.set_language(language)
-        return _translation_layer.to_english(text)
+        from deep_translator import GoogleTranslator
+        return GoogleTranslator(source=language, target='en').translate(text)
     except Exception:
         return text
 
 
 def _translate_from_english(text: str, language: str) -> str:
-    if not _translation_layer or language == "en":
+    if language == "en":
         return text
+    if _translation_layer:
+        try:
+            _translation_layer.set_language(language)
+            return _translation_layer.from_english(text)
+        except Exception:
+            pass
+    # Fallback to deep-translator
     try:
-        _translation_layer.set_language(language)
-        return _translation_layer.from_english(text)
+        from deep_translator import GoogleTranslator
+        return GoogleTranslator(source='en', target=language).translate(text)
     except Exception:
         return text
 
@@ -245,9 +259,78 @@ def _do_analysis(text: str, language: str) -> dict:
 
     if language != "en":
         result["explanation"] = _translate_from_english(result["explanation"], language)
+        for issue in result.get("issues", []):
+            issue["title"] = _translate_from_english(issue["title"], language)
+            issue["description"] = _translate_from_english(issue["description"], language)
+        for rec in result.get("recommendations", []):
+            rec["title"] = _translate_from_english(rec["title"], language)
+            rec["description"] = _translate_from_english(rec["description"], language)
 
     result["relevant_bills"] = relevant_bills
     return result
+
+
+class TranslateRequest(BaseModel):
+    text: str
+    from_lang: str = "en"
+    to_lang: str = "en"
+
+
+def _bedrock_translate(text: str, from_lang: str, to_lang: str) -> Optional[str]:
+    """Use Bedrock to translate text."""
+    try:
+        import boto3
+        import json
+        from botocore.config import Config
+        from config import AWS_REGION, NOVA_MODEL_ID
+
+        lang_names = {"en": "English", "es": "Spanish", "fr": "French", "de": "German", "it": "Italian"}
+        client = boto3.client(
+            "bedrock-runtime",
+            region_name=AWS_REGION,
+            config=Config(retries={"max_attempts": 2, "mode": "standard"}, read_timeout=30, connect_timeout=10),
+        )
+        prompt = f"Translate the following text from {lang_names.get(from_lang, from_lang)} to {lang_names.get(to_lang, to_lang)}. Return ONLY the translation, nothing else.\n\n{text}"
+        response = client.converse(
+            modelId=NOVA_MODEL_ID,
+            messages=[{"role": "user", "content": [{"text": prompt}]}],
+            inferenceConfig={"maxTokens": 1500, "temperature": 0.1},
+        )
+        blocks = response["output"]["message"]["content"]
+        return "\n".join(b["text"] for b in blocks if "text" in b).strip()
+    except Exception:
+        return None
+
+
+@router.post("/translate")
+async def translate_text(request: TranslateRequest):
+    """Translate text between supported languages."""
+    text = request.text
+    if request.from_lang == request.to_lang or not text.strip():
+        return {"text": text}
+
+    # Try translation layer first
+    translated = text
+    if request.from_lang != "en":
+        translated = _translate_to_english(translated, request.from_lang)
+    if request.to_lang != "en":
+        translated = _translate_from_english(translated, request.to_lang)
+
+    # If translation layer didn't change anything, try Bedrock
+    if translated == text:
+        bedrock_result = _bedrock_translate(text, request.from_lang, request.to_lang)
+        if bedrock_result:
+            translated = bedrock_result
+
+    # Last resort: use deep-translator (Google Translate, free)
+    if translated == text:
+        try:
+            from deep_translator import GoogleTranslator
+            translated = GoogleTranslator(source=request.from_lang, target=request.to_lang).translate(text)
+        except Exception:
+            pass
+
+    return {"text": translated}
 
 
 @router.post("/", response_model=AnalyzeResponse)

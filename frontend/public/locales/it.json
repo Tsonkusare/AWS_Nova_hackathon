@@ -29,7 +29,10 @@
     "generating": "Generazione...",
     "generateSample": "Genera Esempio",
     "generateError": "Impossibile generare il testo. Assicurarsi che il backend sia in esecuzione.",
-    "backendError": "Impossibile raggiungere il backend. Assicurarsi che il server sia in esecuzione sulla porta 8000."
+    "backendError": "Impossibile raggiungere il backend. Assicurarsi che il server sia in esecuzione sulla porta 8000.",
+    "listening": "Ascolto...",
+    "unsupportedLanguage": "Questa lingua non è supportata. Si prega di utilizzare inglese, spagnolo, tedesco, italiano o francese.",
+    "translating": "Traduzione..."
   },
   "results": {
     "riskLevel": "Livello di Rischio",

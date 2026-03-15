@@ -39,11 +39,11 @@ export async function analyzeFile(
   return response.json();
 }
 
-export async function generateText(category?: string): Promise<{ text: string; category: string }> {
+export async function generateText(category?: string, language?: string): Promise<{ text: string; category: string }> {
   const response = await fetch(`${API_BASE}/generate/`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ category: category || null }),
+    body: JSON.stringify({ category: category || null, language: language || 'en' }),
   });
 
   if (!response.ok) {
@@ -118,6 +118,18 @@ export async function getProject(projectId: number) {
     throw new Error(`Failed to get project: ${response.statusText}`);
   }
   return response.json();
+}
+
+export async function translateText(text: string, fromLang: string, toLang: string): Promise<string> {
+  const response = await fetch(`${API_BASE}/analyze/translate`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text, from_lang: fromLang, to_lang: toLang }),
+  });
+
+  if (!response.ok) return text;
+  const data = await response.json();
+  return data.text;
 }
 
 export async function checkBackendHealth(): Promise<boolean> {

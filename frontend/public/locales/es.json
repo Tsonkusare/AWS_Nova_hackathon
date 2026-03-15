@@ -29,7 +29,10 @@
     "generating": "Generando...",
     "generateSample": "Generar Ejemplo",
     "generateError": "No se pudo generar texto. Asegurese de que el backend este funcionando.",
-    "backendError": "No se pudo conectar al backend. Asegurese de que el servidor este funcionando en el puerto 8000."
+    "backendError": "No se pudo conectar al backend. Asegurese de que el servidor este funcionando en el puerto 8000.",
+    "listening": "Escuchando...",
+    "unsupportedLanguage": "Este idioma no es compatible. Por favor use inglés, español, alemán, italiano o francés.",
+    "translating": "Traduciendo..."
   },
   "results": {
     "riskLevel": "Nivel de Riesgo",

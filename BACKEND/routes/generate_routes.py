@@ -14,6 +14,7 @@ router = APIRouter(prefix="/generate", tags=["Generate"])
 
 class GenerateRequest(BaseModel):
     category: Optional[str] = None
+    language: Optional[str] = "en"
 
 
 class GenerateResponse(BaseModel):
@@ -90,10 +91,28 @@ Return ONLY the description text, no quotes or formatting."""
         return None
 
 
+def _translate_from_english(text: str, language: str) -> str:
+    if language == "en":
+        return text
+    try:
+        from translation.translation import LegalTranslationLayer
+        layer = LegalTranslationLayer()
+        layer.set_language(language)
+        return layer.from_english(text)
+    except Exception:
+        pass
+    try:
+        from deep_translator import GoogleTranslator
+        return GoogleTranslator(source='en', target=language).translate(text)
+    except Exception:
+        return text
+
+
 @router.post("/", response_model=GenerateResponse)
 async def generate_text(request: GenerateRequest):
     """Generate a sample AI product description."""
     category = request.category
+    language = request.language or "en"
 
     # Pick a random category if none specified
     if not category or category not in SAMPLE_TEXTS:
@@ -105,6 +124,10 @@ async def generate_text(request: GenerateRequest):
     # Fall back to curated samples
     if not text:
         text = random.choice(SAMPLE_TEXTS[category])
+
+    # Translate if not English
+    if language != "en":
+        text = _translate_from_english(text, language)
 
     return GenerateResponse(text=text, category=category)
 

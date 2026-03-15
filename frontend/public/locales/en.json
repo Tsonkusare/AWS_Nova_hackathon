@@ -29,7 +29,10 @@
     "generating": "Generating...",
     "generateSample": "Generate Sample",
     "generateError": "Could not generate text. Make sure the backend is running.",
-    "backendError": "Could not reach the backend. Make sure the server is running on port 8000."
+    "backendError": "Could not reach the backend. Make sure the server is running on port 8000.",
+    "listening": "Listening...",
+    "unsupportedLanguage": "This language is not supported. Please use English, Spanish, German, Italian, or French.",
+    "translating": "Translating..."
   },
   "results": {
     "riskLevel": "Risk Level",

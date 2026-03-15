@@ -31,10 +31,15 @@ export default function HumanAvatar({ config, animate = true }: HumanAvatarProps
           child.material = child.material.clone();
         }
       }
+      // Hide built-in glasses
+      if ((child.name || '').includes('Wolf3D_Glasses')) {
+        child.visible = false;
+      }
     });
     return clone;
   }, [scene]);
 
+  // Apply color customizations
   useEffect(() => {
     clonedScene.traverse((child) => {
       if (!((child instanceof SkinnedMesh || child instanceof Mesh) && child.material)) return;
@@ -43,7 +48,6 @@ export default function HumanAvatar({ config, animate = true }: HumanAvatarProps
       const name = (child.name || '').toLowerCase();
       const matName = (mat.name || '').toLowerCase();
 
-      // Both models use Wolf3D_ naming
       if (matName.includes('skin') || name.includes('head') || name.includes('body')) {
         mat.color = new Color(config.skinColor);
         mat.map = null;

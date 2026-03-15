@@ -14,7 +14,7 @@ export default function AdvisorAvatar() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4">
-      <AvatarScene config={avatarConfig} size="h-72" interactive />
+      <AvatarScene config={avatarConfig} size="h-96" />
 
       <div className="bg-white/5 border border-white/10 rounded-xl p-4 w-full">
         {isAnalyzing ? (

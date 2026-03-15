@@ -131,8 +131,8 @@ export default function WelcomeScreen() {
         <div>
           <label className="text-sm text-slate-300 block mb-3">{t('welcome.selectAvatar')}</label>
           <div className="flex flex-col lg:flex-row gap-6">
-            <div className="lg:w-1/2 bg-white/5 border border-white/10 rounded-xl overflow-hidden">
-              <AvatarScene config={localConfig} size="h-80" interactive />
+            <div className="lg:w-1/2 bg-white/5 border border-white/10 rounded-xl">
+              <AvatarScene config={localConfig} size="h-80" />
             </div>
             <div className="lg:w-1/2">
               <AvatarCustomizer config={localConfig} onChange={setLocalConfig} />
